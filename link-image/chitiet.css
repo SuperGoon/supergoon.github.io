@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    background-color: rgb(159, 249, 255);
+    font-size: 16px;
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 30px 50px;
+    max-width: 1000px;
+    background-color: rgb(199, 250, 246);
+
+}
+
+h1 {
+    font-family: comic sans MS;
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    font-family: comic sans MS;
+    color: sandybrown;
+}
+
+.anh {
+    text-align: center;
+}
