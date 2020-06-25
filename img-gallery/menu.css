@@ -33,10 +33,9 @@
 .li {
     cursor: pointer;
     height: 50px;
-    line-height: 3.5;
     list-style: none;
     float: left;
-    padding: 0 25px;
+    padding: 18.5px 25px;
 }
 
 .a {
