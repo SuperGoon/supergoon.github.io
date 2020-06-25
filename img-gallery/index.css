@@ -33,18 +33,19 @@ h1 {
 
 h2 {
     text-align: center;
-    color: lawngreen;
+    color: green;
 }
 
 .imgsp {
     box-sizing: border-box;
     max-width: 1000px;
+    text-align: center;
 }
 
 .box {
     margin-top: 30px;
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid rgb(199, 250, 246);
     max-width: 32%;
 }
 
