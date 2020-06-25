@@ -17,7 +17,15 @@ body {
 }
 
 p {
-    margin: auto;
+    margin: 0;
+    padding-top: 192px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.p {
+    padding: 92px;
 }
 
 .pic11 {
@@ -100,21 +108,23 @@ p {
 }
 
 .pic41 {
-    width: 33.3333333333%;
+    width: 33.0833333333%;
     height: 400px;
     background-color: red;
-    border-right-width: 15px;
+    border-right-width: 7.5px;
 }
 
 .pic42 {
-    width: 33.3333333333%;
+    width: 33.8333333333%;
     height: 400px;
     background-color: green;
-    border-right-width: 15px;
+    border-right-width: 7.5px;
+    border-left-width: 7.5px;
 }
 
 .pic43 {
-    width: 33.3333333333%;
+    width: 33.08333333333%;
     height: 400px;
     background-color: blue;
+    border-left-width: 7.5px;
 }
