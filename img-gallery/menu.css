@@ -7,16 +7,16 @@
 }
 
 .navbar {
-    height: 50px;
+    height: 50%;
     font-size: 16px;
     color: #fff;
 }
 
 .content {
-    float: left;
+    display: inline-block;
     max-width: 100%;
     text-align: center;
-    height: 50px;
+    height: 50%;
 }
 
 .padding {
@@ -27,12 +27,12 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-    height: 50px;
+    height: 50%;
 }
 
 .li {
     cursor: pointer;
-    height: 50px;
+    height: 50%;
     list-style: none;
     float: left;
     padding: 18.5px 25px;
@@ -49,4 +49,8 @@
 
 a:hover {
     color: hotpink;
+}
+
+* {
+    box-sizing: border-box;
 }
