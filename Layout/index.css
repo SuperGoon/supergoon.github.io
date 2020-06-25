@@ -22,12 +22,12 @@ p {
 .pic11 {
     background-color: red;
     text-align: center;
-    width: 50%;
+    width: 60%;
     height: 400px;
 }
 
 .pic12 {
-    width: 50%;
+    width: 40%;
     height: 400px;
     text-align: center;
 }
@@ -53,12 +53,12 @@ p {
     background-color: red;
     text-align: center;
     border-right-width: 15px;
-    width: 48.2%;
+    width: 58.2%;
     height: 400px;
 }
 
 .pic22 {
-    width: 50%;
+    width: 40%;
     height: 400px;
     text-align: center;
 }
