@@ -35,6 +35,10 @@ h2 {
     color: green;
 }
 
+p {
+    text-align: center;
+}
+
 .imgsp {
     max-width: 1000px;
     text-align: center;
