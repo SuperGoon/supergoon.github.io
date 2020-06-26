@@ -128,3 +128,7 @@ p {
     background-color: blue;
     border-left-width: 7.5px;
 }
+
+* {
+    box-sizing: border-box;
+}
