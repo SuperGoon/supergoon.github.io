@@ -1,7 +1,7 @@
 var canvas = document.querySelector("#canvas")
 canvas.style.backgroundColor = "rgb(252, 179, 150)"
 canvas.width = 800
-canvas.height = 1600
+canvas.height = 800
 canvas.style.border = '2px solid red'
 var ctx = canvas.getContext('2d')
 
