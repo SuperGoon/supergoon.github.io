@@ -20,6 +20,7 @@ class Arc {
         ctx.arc(this.dx, this.dy, this.radius, 0, this.x * Math.PI, false);
         ctx.fill();
         ctx.stroke()
+        ctx.closePath()
     }
 }
 

@@ -20,6 +20,7 @@ class Rect {
         ctx.rect(this.dx, this.dy, this.width, this.height);
         ctx.fill();
         ctx.stroke()
+        ctx.closePath()
     }
 }
 var rectangle1 = new Rect(0, 0, 150, 100, 'red')
