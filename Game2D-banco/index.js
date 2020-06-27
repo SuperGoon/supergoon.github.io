@@ -34,7 +34,6 @@ for (let i = 0; i < 8; i += 2) {
         ctx.fillStyle = 'black';
         ctx.rect(j * 100, i * 100, 100, 100)
         ctx.fill()
-        ctx.closePath()
     }
 
 }
