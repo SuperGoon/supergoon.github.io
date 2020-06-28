@@ -19,7 +19,7 @@ body {
     width: 100%;
 }
 
-.task1 {
+.main {
     border: solid white;
     max-width: 100%;
 }
@@ -81,26 +81,17 @@ p {
     padding-top: 90px;
 }
 
-.box {
-    border: solid white;
-    width: 100%;
-    float: left;
-}
-
 .border4 {
     border-right: 10px solid white;
-    width: 33.333333%;
 }
 
 .border5 {
     border-right: 5px solid white;
     border-left: 5px solid white;
-    width: 33.333333%;
 }
 
 .border6 {
     border-left: 10px solid white;
-    width: 33.333333%;
 }
 
 .pic4 {
