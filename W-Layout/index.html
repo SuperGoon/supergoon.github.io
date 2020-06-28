@@ -4,68 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài về nhà CSS Layout</title>
+    <title>layout</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-    <div class="menu">
-        <h1>Bài số 1</h1>
-        <div class="box1 pic11">
-            <p>Picture 1 - Height 400px</p>
-        </div>
-        <div class="box1 pic12">
-            <div class="pic121">
-                <p class="p">Picture 2- Height 200px</p>
-            </div>
-            <div class="pic122">
-                <p class="p">Picture 3 - Height 200px</p>
-            </div>
-        </div>
+    <section>
+        <div class="wrap">
 
-        <h1>Bài số 2</h1>
-        <div class="box2 pic21">
-            <p>Picture 1 - Height 400px - Height 200px</p>
-        </div>
-        <div class="box2 pic22">
-            <div class="pic121">
-                <p class="p">Picture 2 - Height 200px</p>
-            </div>
-            <div class="pic122">
-                <p class="p">Picture 3</p>
-            </div>
-        </div>
+            <div class="content">
 
-        <h1>Bài số 3</h1>
-        <div class="pic3">
-            <div class="box3 pic31">
-                <p>Picture 1 - Height 400px
-                </p>
+                <div class="task1">
+                    <h1>Task 1</h1>
+                    <div class="pic1">
+                        <p>Height: 400px</p>
+                    </div>
+                    <div class="pic2">
+                        <div class="pic2-1">
+                            <p>Height: 200px</p>
+                        </div>
+                        <div class="pic2-2">
+                            <p>Height: 200px</p>
+                        </div>
+                    </div>
+
+                    <h1>Task 2</h1>
+                    <div class="box">
+                        <div class="borderP1 pic1">
+                            <p>Height: 400px</p>
+                        </div>
+                        <div class="borderP2 pic2">
+                            <div class="pic2-1 p">
+                                <p>Height: 200px</p>
+                            </div>
+                            <div class="pic2-2 p">
+                                <p>Height: 200px</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1> Task 3</h1>
+                    <div class="box">
+                        <div class="pic4">
+                            <p>Height: 400px</p>
+                        </div>
+
+                        <div class="pic5">
+                            <p>Height: 400px</p>
+                        </div>
+                        <div class="pic6">
+                            <p>Height: 400px</p>
+                        </div>
+
+                    </div>
+
+                    <h1> Task 4</h1>
+                    <div class="box">
+                        <div class="border4 pic4">
+                            <p>Height: 400px</p>
+                        </div>
+
+                        <div class="border5 pic5">
+                            <p>Height: 400px</p>
+                        </div>
+                        <div class="border6 pic6">
+                            <p>Height: 400px</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="box3 pic32">
-                <p>Picture 2 - Height 400px</p>
-            </div>
-            <div class="box3 pic33">
-                <p>Picture 3 - Height 400px</p>
-            </div>
         </div>
-
-        <h1>Bài số 4</h1>
-        <div class="pic3">
-            <div class="box4 pic41">
-                <p>Picture 1 - Height 400px
-                </p>
-            </div>
-
-            <div class="box4 pic42">
-                <p>Picture 2 - Height 400px</p>
-            </div>
-            <div class="box4 pic43">
-                <p>Picture 3 - Height 400px</p>
-            </div>
-        </div>
-    </div>
+    </section>
 </body>
 
 </html>
