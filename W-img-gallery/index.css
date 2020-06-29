@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     padding: 0;
     max-width: 1000px;
-    background-color: rgb(199, 250, 246);
+    background-color: rgb(255, 242, 222);
 }
 
 .border {
@@ -47,8 +47,10 @@ p {
 .box {
     margin-top: 30px;
     display: inline-block;
-    border: 1px solid rgb(199, 250, 246);
+    border: 1px solid rgb(255, 242, 222);
     max-width: 32%;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .banner {
