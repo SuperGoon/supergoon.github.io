@@ -50,6 +50,9 @@ p {
     border: 1px solid rgb(255, 247, 234);
     max-width: 32%;
     font-size: 20px;
+}
+
+.box>a {
     text-decoration: none;
 }
 
