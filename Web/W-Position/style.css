@@ -1,23 +1,19 @@
             * {
                 box-sizing: border-box;
-                padding: 0;
-                margin: 0;
             }
             
             body {
                 margin: auto;
                 background-color: rgb(190, 231, 255);
                 font-family: 'Lato', sans-serif;
-                position: relative
+                height: 2000px;
             }
             
-            #wrap {
+            .wrap {
                 background-color: seashell;
                 margin: auto;
                 padding: 0;
-                width: 1000px;
-                display: flex;
-                flex-wrap: wrap;
+                max-width: 1000px;
             }
             
             .banner {
@@ -26,7 +22,7 @@
             
             .mainMenu {
                 background-color: rgb(255, 215, 162);
-                max-width: 200px;
+                max-width: 20%;
                 height: 100%;
                 padding: 5px;
                 position: absolute;
@@ -36,10 +32,10 @@
             
             .content {
                 border: 1px solid rgb(216, 216, 216);
+                /*thuộc tính con trỏ chuột */
                 cursor: pointer;
                 background-color: rgb(253, 234, 220);
-                /*thuộc tính con trỏ chuột */
-                width: 100%;
+                max-width: 100%;
                 display: flex;
                 flex-wrap: wrap;
             }
