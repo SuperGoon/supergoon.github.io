@@ -30,6 +30,11 @@
                 bottom: 50%;
             }
             
+            .mainMenu:hover {
+                transform: scale(1.1);
+                transition: all ease-in-out 0.5s;
+            }
+            
             .content {
                 border: 1px solid rgb(216, 216, 216);
                 /*thuộc tính con trỏ chuột */
@@ -88,15 +93,16 @@
                 text-decoration: none;
                 font-family: Robot, sans-serif;
                 font-size: 16px;
-                color: blue;
+                color: Blue;
+                font-weight: 550;
             }
             
             footer {
                 padding-top: 10px;
                 clear: both;
                 text-align: center;
-                color: tomato;
-                background-color: rgb(255, 202, 228);
+                color: rgb(0, 162, 255);
+                background-color: rgb(253, 234, 220);
             }
             
             .top {
