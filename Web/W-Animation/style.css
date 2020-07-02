@@ -46,6 +46,7 @@ div.img {
 .drawheart {
     width: 40%;
     margin: auto;
+    margin-top: 200px;
     padding: 0;
     display: flex;
     justify-content: center;
