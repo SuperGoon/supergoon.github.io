@@ -1,0 +1,94 @@
+body {
+    box-sizing: border-box;
+    background-image: url(./img/background-image.jpg);
+}
+
+header {
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: comic sans MS;
+    color: rgb(255, 141, 34);
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.content {
+    margin: auto;
+    padding: 0;
+    width: 40%;
+    height: auto;
+    background-color: rgb(40, 40, 40, 1);
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    border: 5px solid white;
+    width: 100%;
+}
+
+div.img {
+    width: 33.33333%;
+    transition: all ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.drawheart {
+    width: 40%;
+    margin: auto;
+    margin-top: 200px;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    transform: translate(-50%, -50%);
+    animation: drawheart 1s ease infinite;
+}
+
+@keyframes drawheart {
+    96% {
+        transform: translate(-50%, -50%) scale(.7, .7)
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1, 1)
+    }
+}
+
+.heart {
+    background-color: rgb(248, 0, 153);
+    width: 200px;
+    height: 200px;
+}
+
+.top {
+    display: flex;
+}
+
+.right {
+    border-radius: 50%;
+    transform: translate(-50%)
+}
+
+.left {
+    border-radius: 50%;
+}
+
+.bottom {
+    margin-top: 50px;
+    margin-left: 50px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    position: absolute;
+    transform: rotate(45deg);
+}

@@ -22,7 +22,7 @@
             
             .mainMenu {
                 background-color: rgb(190, 231, 255);
-                max-width: 20%;
+                max-width: 15%;
                 height: 100%;
                 padding: 5px;
                 position: absolute;
@@ -30,9 +30,10 @@
                 bottom: 50%;
             }
             
-            .mainMenu:hover {
+            .mainMenu:hover li {
                 transform: scale(1.1);
                 transition: all ease-in-out 0.5s;
+                background-color: rgb(255, 158, 158);
             }
             
             .content {
@@ -65,8 +66,8 @@
             }
             
             .img:hover img {
-                transform: scale(1.2);
-                transition: all ease-in-out 0.5s;
+                transform: scale(1.1);
+                transition: all ease-in-out 1s;
             }
             
             ul {
