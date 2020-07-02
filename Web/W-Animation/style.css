@@ -35,7 +35,7 @@ img {
 
 div.img {
     width: 33.33333%;
-    transition: all ease-in-out;
+    transition: all ease-in-out 0.3s;
 }
 
 .img:hover {
@@ -46,21 +46,18 @@ div.img {
 .drawheart {
     width: 40%;
     margin: auto;
-    margin-top: 200px;
     padding: 0;
     display: flex;
-    justify-items: center;
-    align-content: center;
-    transform: translate(-50%, -50%);
+    justify-content: center;
     animation: drawheart 1s ease infinite;
 }
 
 @keyframes drawheart {
-    96% {
-        transform: translate(-50%, -50%) scale(.7, .7)
+    90% {
+        transform: scale(.8, .8)
     }
     100% {
-        transform: translate(-50%, -50%) scale(1, 1)
+        transform: scale(1, 1)
     }
 }
 
@@ -76,19 +73,18 @@ div.img {
 
 .right {
     border-radius: 50%;
-    transform: translate(-50%)
+    transform: translate(-23%);
 }
 
 .left {
     border-radius: 50%;
+    transform: translate(23%);
 }
 
 .bottom {
-    margin-top: 50px;
-    margin-left: 50px;
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;
     position: absolute;
-    transform: rotate(45deg);
+    transform: translateY(27%) rotate(45deg);
 }
