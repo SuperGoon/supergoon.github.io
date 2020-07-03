@@ -27,9 +27,10 @@ var ctx = canvas.getContext('2d')
 for (let i = 0; i < 8; i += 2) {
     for (let j = 1; j < 8; j += 2) {
         ctx.fillStyle = 'black';
-        ctx.fillRect(i * 100, j * 100, 100, 100)
-        ctx.fill()
+        ctx.fillRect(i * 100, j * 100, 100, 100);
+        ctx.fill();
         ctx.fillStyle = 'black';
-        ctx.fillRect(j * 100, i * 100, 100, 100)
+        ctx.fillRect(j * 100, i * 100, 100, 100);
+        ctx.fill()
     }
 }
