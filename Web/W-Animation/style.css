@@ -50,7 +50,7 @@ div.img {
     padding: 0;
     display: flex;
     justify-content: center;
-    animation: drawheart 1s ease infinite;
+    animation: drawheart 0.5s ease infinite;
 }
 
 @keyframes drawheart {
