@@ -84,8 +84,8 @@ div.img {
 
 .bottom {
     border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
-    border-bottom-left-radius: 20%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
     position: absolute;
     transform: translateY(27%) rotate(45deg);
 }
