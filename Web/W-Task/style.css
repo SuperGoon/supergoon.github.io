@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    display: inline-block;
 }
 
 body {
@@ -21,7 +20,7 @@ h1 {
 .content {
     margin: auto;
     padding: 0;
-    max-width: 1024px;
+    max-width: 80%;
     height: auto;
     cursor: pointer;
     display: flex;
