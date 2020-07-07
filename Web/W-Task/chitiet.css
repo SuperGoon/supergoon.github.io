@@ -20,9 +20,14 @@ h1 {
     margin: auto;
     margin-top: 20px;
     padding: 20px;
-    max-width: 80%;
+    max-width: 1024px;
+    height: auto;
     background-color: white;
     line-height: 1.5;
+}
+
+img {
+    max-width: 80%;
 }
 
 .img {
