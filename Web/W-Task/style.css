@@ -33,7 +33,7 @@ div>a {
 }
 
 img {
-    border: 2px solid rgb(95, 106, 255);
+    border: 2px solid white;
     border-radius: 5px;
     width: 100%;
     transition: all ease-in-out 0.5s;
