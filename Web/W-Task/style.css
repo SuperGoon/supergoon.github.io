@@ -27,7 +27,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-div>a>i {
+div>a {
     text-decoration: none;
 }
 
