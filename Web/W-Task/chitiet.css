@@ -6,10 +6,10 @@ body {
     background-color: rgb(246, 251, 255);
     color: black;
     font-size: 1.2em;
+    font-family: Courier New, sans-serif;
 }
 
 h1 {
-    font-family: Roboto, sans-serif;
     color: rgb(255, 141, 34);
     font-size: 3em;
     font-weight: 500;
@@ -23,7 +23,6 @@ h1 {
     max-width: 80%;
     background-color: white;
     line-height: 1.5;
-    font-family: Courier New, sans-serif;
 }
 
 .img {
