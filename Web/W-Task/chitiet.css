@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    font-family: comic sans MS;
+    font-family: Roboto, sans-serif;
     color: rgb(255, 141, 34);
     font-size: 3em;
     font-weight: 500;
@@ -23,7 +23,7 @@ h1 {
     max-width: 80%;
     background-color: white;
     line-height: 1.5;
-    font-family: Roboto, sans-serif;
+    font-family: Courier New, sans-serif;
 }
 
 .img {
