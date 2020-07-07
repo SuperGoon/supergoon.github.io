@@ -1,0 +1,268 @@
+
+function load_Statistics ()
+{
+	$.ajax({
+		async: true,
+		dataType: 'json',
+		url: ROOT+"load_ajax.php?do=statistics",
+		type: 'POST',
+		success: function (data) {
+			$("#stats_online").html(data.online);
+			$("#stats_totals").html(data.totals);
+			$("#stats_member").html(data.mem_online);
+		}
+	}) ;
+
+}
+
+
+function LoadAjax(doAct,mydata,ext_display) {
+	$.ajax({
+		async: true,
+		url: ROOT+'load_ajax.php?do='+doAct,
+		type: 'POST',
+		data: mydata ,
+		success: function (data) {
+			$("#"+ext_display).html(data)
+		}
+	}) ;
+}
+
+function doLogout()
+{
+	$.alerts.overlayColor = "#000000" ;
+	$.alerts.overlayOpacity = "0.8" ;
+	jConfirm('Are you sure to logout account?', js_lang['announce'], function(r) {
+		if (r){
+			$.ajax({
+				url: ROOT+'load_ajax.php?do=ajax_logout',
+				success: function (data) {
+					location.reload();
+				}
+			}) ;
+		}
+	});
+	return false;
+}
+
+function resizeIframe(id,height) {
+  var iframe_height = height+30;
+  //iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  $("#vnt_adv_"+id).height( iframe_height   );
+}
+
+vnTRUST.updateView = function(mod,id) {
+
+  var csrf_token = $("#vnt_csrf_token").val();
+  var mydata = "mod="+mod+'&id='+id +'&csrf_token='+csrf_token;
+  $.ajax({
+    async: true,
+    dataType: 'json',
+    url: ROOT + 'load_ajax.php?do=updateView',
+    type: 'POST',
+    data: mydata,
+    success: function (rs) {
+      $("#view_"+id).html(rs.view);
+    }
+  });
+
+};
+
+
+/** Top Nav
+ **************************************************************** **/
+vnTRUST.topNav = function () {
+  $(".mb-search").click(function (e) {
+    if(!  $(".vnt-search").hasClass("show")){
+      $(".vnt-search").addClass("show");
+    }else{
+      $(".vnt-search").removeClass("show");
+    }
+  });
+
+};
+
+/** init Load
+ **************************************************************** **/
+vnTRUST.init = function () {
+  var Xwidth = $(window).width();
+  if (Xwidth < 1100) {
+    $(".floating-left").hide();
+    $(".floating-right").hide()
+  }
+  vnTRUST.topNav();
+
+  $(".fancybox").fancybox();
+
+  $(".alert-autohide").delay(5000).slideUp(200, function () {
+    $(this).alert('close');
+  });
+
+  $(".load_state").change(function() {
+    var ext_display = $(this).attr("data-state");
+
+    var mydata =  "do=option_state&city="+ $(this).val();
+    $.ajax({
+      type: "GET",
+      url: ROOT+'load_ajax.php',
+      data: mydata,
+      success: function(html){
+        $("#"+ext_display).html(html);
+      }
+    });
+  });
+
+
+  $(".load_ward").change(function() {
+    var ext_display = $(this).attr("data-ward") ;
+
+    var mydata =  "do=option_ward&state="+ $(this).val();
+    $.ajax({
+      type: "GET",
+      url: ROOT+'load_ajax.php',
+      data: mydata,
+      success: function(html){
+        $("#"+ext_display).html(html);
+      }
+    });
+  });
+
+
+  $(".fixed_menu").addClass("show");
+  $("#click_hotline , .link_support_online").click(function(){
+    $("#fixed_hotline").addClass("active");
+  });
+  $(".d_close a").click(function(e){
+    $("#fixed_hotline").removeClass("active");
+  });
+  $(".wrap-support .hl_title").click(function(){
+    if(! $(this).parents(".wrap-support").hasClass("active")){
+      $(".wrap-support").removeClass("active");
+      $(this).parents(".wrap-support").addClass("active");
+    }else{
+      $(this).parents(".wrap-support").removeClass("active");
+    }
+  });
+
+  $(window).bind('click',function(e){
+    var $clicked = $(e.target);
+    if(! $clicked.parents().hasClass("wrap-support")){
+      $(".wrap-support").removeClass("active");
+    }
+  });
+
+
+  $(window).scroll(function (e) {
+    var _scroll = $(window).scrollTop();
+    if(_scroll > $(".w-fixed-menu").offset().top){
+      $(".fixed-menu").addClass("active");
+    }else{
+      $(".fixed-menu").removeClass("active");
+    }
+  });
+
+
+  // adv  scroll
+
+  $(window).load(function(){
+    vnTRUST.vnTAdvFixed('advRight');
+    vnTRUST.vnTAdvFixed('advSidebar');
+  });
+
+
+  if ($('iframe.resizeIframe').length > 0) {
+    $('iframe.resizeIframe').each(function () {
+      $(this).load(function () {
+        $(this).height( $(this).contents().find("html").height() );
+      });
+    });
+  }
+
+
+
+  $(".menu_mobile").my_menu({
+    type : 2,
+    show_position : 'left'
+  });
+
+  $(window).resize(function(){
+
+  });
+
+  $(".menu-category .mc-title").click(function (e) {
+    if(! $(this).parents(".menu-category").hasClass("active")){
+      $(this).parents(".menu-category").addClass("active");
+    }else{
+      $(this).parents(".menu-category").removeClass("active");
+    }
+  });
+
+  $(".vnt-cat-menu .cat-menu-title").click(function (e) {
+    if(! $(this).parents(".vnt-cat-menu").hasClass("active")){
+      $(this).parents(".vnt-cat-menu").addClass("active");
+    }else{
+      $(this).parents(".vnt-cat-menu").removeClass("active");
+    }
+  });
+
+  $(".vnt-cat-menu .m-view a").click(function(){
+      if(!$(this).parents(".cat-menu").hasClass("mshow")){
+          $(this).parents(".cat-menu").addClass("mshow");
+          $(this).text('Rút gọn').attr('class','view-less');
+      }
+      else{
+          $(this).parents(".cat-menu").removeClass("mshow");
+          $(this).text('Xem tất cả').attr('class','view-more');
+      }
+  });
+
+
+  $(window).bind("click",function (e) {
+    var $clicked = $(e.target);
+    if(! $clicked.parents().hasClass("menu-category")){
+      $(".menu-category").removeClass("active");
+    }
+
+    if(! $clicked.parents().hasClass("vnt-cat-menu")){
+      $(".vnt-cat-menu").removeClass("active");
+    }
+
+  });
+
+
+  //Update 2020
+
+  //  popup
+  $('.fbb-nav li a.min').click(function(event) {
+    var obj = $(this).closest('.floating_banner_bottom');
+    $(this).css('display', 'none');
+    obj.find('.fbb-nav li a.max').css('display', 'block');
+    obj.find('.fbb-content').slideUp('slow');
+  });
+
+  $('.fbb-nav li a.max').click(function(event) {
+    var obj = $(this).closest('.floating_banner_bottom');
+    $(this).css('display', 'none');
+    obj.find('.fbb-nav li a.min').css('display', 'block');
+    obj.find('.fbb-content').slideDown('slow');
+  });
+
+  $('.fbb-nav li.fbbclose').click(function(event) {
+    var obj = $(this).closest('.floating_banner_bottom');
+    obj.find('.fixed_full').fadeOut('fast');
+    obj.fadeOut('slow');
+  });
+  // end popup
+
+
+  //vnTRUST.load_Statistics();
+  //vnTRUST.show_popupBanner(10000);
+  vnTRUST.ZoomImage();
+  //vnTRUST.goTopStart();
+
+};
+
+/* Init */
+jQuery(window).ready(function () {
+  vnTRUST.init();
+});
