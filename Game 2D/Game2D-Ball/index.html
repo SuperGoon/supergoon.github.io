@@ -50,50 +50,29 @@
             c.stroke();
             c.closePath();
         }
-        move(dx, dy) {
-
-
-                if (this.x > canvas.width - this.radius) {
-                    this.x = canvas.width - this.radius - this.dx;
-                    this.dy = 4;
-                }
-                if (this.y > canvas.height - this.radius) {
-                    this.y = canvas.height - this.radius - this.dy;
-                    this.dx = -4;
-
-                }
-                if (this.x < this.radius) {
-                    this.x = this.radius - this.dx;
-                    this.dy = -4;
-
-                }
-                if (this.y < this.radius) {
-                    this.y = this.radius - this.dy;
-                    this.dx = 4;
-                }
-
-                this.x = this.x + this.dx;
-                this.y = this.y + this.dy;
-                this.draw();
+        move() {
+            if (this.x + this.dx > canvas.width - this.radius) {
+                this.x = canvas.width - this.radius - this.dx;
+                this.dy = 4;
             }
-            // run() {
-            //     if (this.y == this.radius && 20 < this.x < canvas.width - this.radius) {
-            //         this.dx = 4
-            //     }
-            //     if (this.x == canvas.width - this.radius && 20 < this.y < canvas.height - this.radius) {
-            //         this.dy = 4
-            //     }
-            //     if (this.y == canvas.height - this.radius && 20 < this.x < canvas.width - this.radius) {
-            //         this.dx = -4
-            //     }
-            //     if (this.x == this.radius && 20 < this.y < canvas.height - this.radius) {
-            //         this.dy = -4
-            //     }
-            // }
-            // pause() {
-            //     this.dx = 0
-            //     this.dy = 0
-            // }
+            if (this.y + this.dy > canvas.height - this.radius) {
+                this.y = canvas.height - this.radius - this.dy;
+                this.dx = -4;
+            }
+            if (this.x + this.dx < this.radius) {
+                this.x = this.radius - this.dx;
+                this.dy = -4;
+            }
+            if (this.y + this.dy < this.radius) {
+                this.y = this.radius - this.dy;
+                this.dx = 4;
+
+            }
+            this.x = this.x + this.dx;
+            this.y = this.y + this.dy;
+            this.draw();
+        }
+
         jump(x, y) {
             c.clearRect(0, 0, canvas.width, canvas.height);
             this.x = x;
@@ -114,23 +93,19 @@
     animate();
 
     function run() {
-        if (ball.y == ball.radius && ball.radius < ball.x < canvas.width - ball.radius) {
+        if (ball.y == ball.radius) {
             ball.dx = 4;
             ball.dy = 0;
-
         }
-        if (ball.x == canvas.width - ball.radius && ball.radius < ball.y < canvas.height - ball.radius) {
+        if (ball.x == canvas.width - ball.radius) {
             ball.dy = 4;
             ball.dx = 0;
-
-
         }
-        if (ball.y == canvas.height - ball.radius && ball.radius < ball.x < canvas.width - ball.radius) {
+        if (ball.y == canvas.height - ball.radius) {
             ball.dx = -4;
             ball.dy = 0;
-
         }
-        if (ball.x == ball.radius && 20 < ball.y < canvas.height - ball.radius) {
+        if (ball.x == ball.radius) {
             ball.dy = -4;
             ball.dx = 0;
 
@@ -153,49 +128,8 @@
             }
         }
     });
-    // var k = 0;
-    // addEventListener('keydown', function(event) {
-    //     if (event.keyCode == 32 && k == 0) {
-    //         console.log('Start was pressed');
-    //         ball.dx = 4;
-    //         ball.dy = 4;
-    //         k = 1;
-    //         console.log(k);
-    //         console.log(event.keyCode);
-    //     }
-    // });
-    // addEventListener('keyup', function(event) {
-    //     if (event.keyCode == 32 && k == 1) {
-    //         console.log('Start was release');
-    //         k = 2;
-    //         console.log(k);
-    //         console.log(event.keyCode);
-    //     }
-    // });
-    // addEventListener('keydown', function(event) {
-    //     if (event.keyCode == 32 && k == 2) {
-    //         console.log('Stop was pressed');
-    //         ball.dx = 0;
-    //         ball.dy = 0;
-    //         k = 3;
-    //         console.log(k);
-    //         console.log(event.keyCode);
-    //     }
-    // });
-    // addEventListener('keyup', function(event) {
-    //     if (event.keyCode == 32 && k == 3) {
-    //         console.log('Stop was release');
-    //         k = 0;
-    //         console.log(k);
-    //         console.log(event.keyCode);
-    //     }
-    // });
+
     addEventListener("click", function(event) {
         ball.jump(20, 20);
     });
-    // addEventListener("keydown", function(event) {
-    //     if (event.keyCode = 39) {
-    //         ball.dx = 4;
-    //     }
-    // });
 </script>
