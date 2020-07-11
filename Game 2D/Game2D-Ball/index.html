@@ -72,6 +72,29 @@
             this.y = this.y + this.dy;
             this.draw();
         }
+        run() {
+            if (ball.y == ball.radius) {
+                ball.dx = 4;
+                ball.dy = 0;
+            }
+            if (ball.x == canvas.width - ball.radius) {
+                ball.dy = 4;
+                ball.dx = 0;
+            }
+            if (ball.y == canvas.height - ball.radius) {
+                ball.dx = -4;
+                ball.dy = 0;
+            }
+            if (ball.x == ball.radius) {
+                ball.dy = -4;
+                ball.dx = 0;
+
+            }
+        }
+        pause() {
+            ball.dx = 0
+            ball.dy = 0
+        }
 
         jump(x, y) {
             c.clearRect(0, 0, canvas.width, canvas.height);
@@ -91,40 +114,15 @@
         ball.move();
     }
     animate();
-
-    function run() {
-        if (ball.y == ball.radius) {
-            ball.dx = 4;
-            ball.dy = 0;
-        }
-        if (ball.x == canvas.width - ball.radius) {
-            ball.dy = 4;
-            ball.dx = 0;
-        }
-        if (ball.y == canvas.height - ball.radius) {
-            ball.dx = -4;
-            ball.dy = 0;
-        }
-        if (ball.x == ball.radius) {
-            ball.dy = -4;
-            ball.dx = 0;
-
-        }
-    }
-
-    function pause() {
-        ball.dx = 0
-        ball.dy = 0
-    }
     let i = 1;
     addEventListener('keypress', function() {
         if (event.keyCode == 32) {
             i++;
             if (i % 2 == 0) {
-                run();
+                ball.run();
             }
             if (i % 2 != 0) {
-                pause();
+                ball.pause();
             }
         }
     });
