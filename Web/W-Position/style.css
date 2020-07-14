@@ -4,36 +4,21 @@
             
             body {
                 margin: auto;
-                background-color: rgb(190, 231, 255);
+                background-color: white;
                 font-family: 'Lato', sans-serif;
                 height: 2000px;
             }
             
             .wrap {
+                margin: auto;
+                margin-left: 250px;
                 background-color: seashell;
-                margin-left: 15%;
-                padding: 0;
                 max-width: 1000px;
+                padding: 0;
             }
             
             .banner {
                 max-width: 100%;
-            }
-            
-            .mainMenu {
-                background-color: rgb(190, 231, 255);
-                max-width: 15%;
-                height: 100%;
-                padding: 5px;
-                position: absolute;
-                top: 0;
-                bottom: 50%;
-            }
-            
-            .mainMenu:hover li {
-                transform: scale(1.1);
-                transition: all ease-in-out 0.5s;
-                background-color: rgb(255, 158, 158);
             }
             
             .content {
@@ -56,7 +41,7 @@
             img {
                 width: 100%;
                 padding: 5px;
-                transition: all ease-in-out;
+                transition: all ease-in-out 1s;
             }
             
             .img {
@@ -67,43 +52,76 @@
             
             .img:hover img {
                 transform: scale(1.1);
-                transition: all ease-in-out 1s;
             }
             
-            ul {
-                text-transform: uppercase;
-                text-decoration: none;
-                background-color: rgb(255, 167, 51);
-                margin-top: 100px;
+            .mainMenu {
+                margin: 0px;
                 padding: 0;
-                width: 100%;
-                height: 30px;
+                top: 200px;
+                width: 200px;
+                height: 324px;
+                background-color: white;
+                position: relative;
                 line-height: 30px;
+                float: left;
             }
             
-            ul li {
+            .mainMenu>ul>li:hover {
+                background-color: rgb(182, 182, 182);
+            }
+            
+            .mainMenu>ul>li:hover>a {
+                color: red;
+            }
+            
+            .mainMenu2 {
+                margin: 0;
+                padding: 0;
+                top: 0px;
+                left: 200px;
+                width: 200px;
+                height: 220px;
+                position: absolute;
+                display: none;
+                background: #fff;
+                box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.2);
+            }
+            
+            .mainMenu>ul>li:hover .mainMenu2 {
+                display: block;
+            }
+            
+            .mainMenu2>li:hover {
+                background-color: rgb(182, 182, 182);
+            }
+            
+            .mainMenu2>li:hover>a {
+                color: red;
+            }
+            
+            ul>li {
                 width: 100%;
                 list-style: none;
-                padding: 0px 5px;
-                background: rgb(255, 227, 191);
-                border: solid rgb(190, 231, 255);
+                padding-left: 10px;
             }
             
             ul>li>a {
+                display: block;
                 text-transform: uppercase;
                 text-decoration: none;
-                font-family: Robot, sans-serif;
-                font-size: 16px;
-                color: Blue;
-                font-weight: 550;
+                font-family: Roboto, sans-serif;
+                font-size: 14px;
+                color: rgb(46, 46, 46);
+                font-weight: 500;
             }
             
             footer {
                 padding-top: 10px;
                 clear: both;
+                margin-bottom: 20px;
                 text-align: center;
-                color: rgb(0, 162, 255);
-                background-color: rgb(253, 234, 220);
+                color: rgb(51, 51, 51);
+                background-color: #FFFFFF;
             }
             
             .top {
@@ -118,4 +136,68 @@
                 -moz-box-shadow: -3px -3px 5px 0px #666;
                 -webkit-box-shadow: -3px -3px 5px 0px #666;
                 box-shadow: -3px -3px 5px 0px #666
+            }
+            
+            .main-container {
+                width: 100%;
+                height: 160px;
+                margin: auto;
+                padding: 20px;
+                background-color: #FFFFFF
+            }
+            
+            .follow-title {
+                font-family: 'Roboto', sans-serif;
+                background-color: #FFFFFF;
+                border-bottom: 0.5px solid black;
+            }
+            
+            .follow-title h3 {
+                display: inline-block;
+                color: orange;
+                padding: 5px 10px
+            }
+            
+            .follow-icon {
+                font-family: 'Roboto', sans-serif;
+                background-color: #FFFFFF;
+                /*padding-top: 20px;*/
+                padding-bottom: 5px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .icon {
+                width: 40px;
+                height: 40px;
+                background-color: #3B5998;
+                float: left;
+                margin-right: 10px;
+                text-align: center;
+                margin-top: 20px;
+                transition: 0.4s;
+            }
+            
+            .icon i {
+                font-size: 20px;
+                color: white;
+                background-color: transparent;
+                display: block;
+                margin-top: 10px;
+            }
+            
+            .twitter {
+                background-color: #1DCAFF;
+            }
+            
+            .google-plus {
+                background-color: #DD4B39;
+                margin-right: 0px;
+            }
+            
+            .icon:hover {
+                background-color: black;
+                margin-top: 15px;
+                transition: 0.4s;
             }
