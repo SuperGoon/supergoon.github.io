@@ -21,7 +21,8 @@ h3 {
 }
 
 header {
-    background-image: url(./img/profile-header-02.jpg);
+    /* background-image: url(./img/profile-header-02.jpg); */
+    background-color: black;
     position: relative;
     margin: 0;
     padding: 0;
@@ -30,6 +31,13 @@ header {
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
+    /* height: calc(100vh - 240px); */
+    /* min-height: 530px;
+    max-height: 640px; */
+}
+
+.item-header {
+    background-image: url(./img/profile-header-02.jpg);
     height: calc(100vh - 240px);
     min-height: 530px;
     max-height: 640px;
@@ -55,6 +63,23 @@ header {
     padding: 0;
     margin: 0;
 }
+
+
+/* .nav-item>a:link {
+    color: white;
+}
+
+.nav-item>a:visited {
+    color: cornflowerblue;
+}
+
+.nav-item>a:hover {
+    color: rgb(180, 180, 180);
+}
+
+.nav-item>a:active {
+    color: tomato;
+} */
 
 .title-header>span>a {
     color: #fff !important;
@@ -85,12 +110,24 @@ header {
 }
 
 .nav-link {
-    color: white;
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.nav-link:link {
+    color: white;
+    /* font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; */
+}
+
+.nav-link:visited {
+    color: cornflowerblue;
 }
 
 .nav-link:hover {
     color: rgb(189, 189, 189);
+}
+
+.nav-link:active {
+    color: tomato;
 }
 
 .img-profile {
@@ -124,8 +161,16 @@ header {
 }
 
 .content2 {
+    background: linear-gradient(#151515, #464646);
+    padding-top: 4rem!important;
+    padding-bottom: 4rem!important;
+    margin: auto;
+    text-align: center;
+}
+
+.content2-2 {
     display: inline-block;
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: left;
     max-width: 70%;
     margin-right: 50px;
@@ -164,13 +209,16 @@ header {
     transition: 1s ease-in-out;
 }
 
-ul {
+.content2-2>ul {
+    margin-top: 30px !important;
+    margin-bottom: 5px !important;
+    padding: 0;
     font-size: 24px;
     font-weight: 600;
 }
 
-li {
-    margin-bottom: 1rem;
+.content2-2>li {
+    margin-bottom: 0.5rem;
     list-style-type: none;
 }
 
