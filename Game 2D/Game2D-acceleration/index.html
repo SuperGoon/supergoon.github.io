@@ -80,15 +80,15 @@
     addEventListener('keydown', function(event) { //bấm phím làm tăng gia tốc dx cho bóng
         if (event.keyCode == 39) {
             console.log('Left was pressed');
-            ball.dx = 20;
+            ball.dx = 10;
         } else if (event.keyCode == 37) {
             console.log('Left was pressed');
-            ball.dx = -20;
+            ball.dx = -10;
         }
     });
 
     addEventListener("click", function(event) {
-        ball.jump(25, canvas.height / 2);
+        ball.jump(20, canvas.height / 2);
     });
 
     function animate() {
