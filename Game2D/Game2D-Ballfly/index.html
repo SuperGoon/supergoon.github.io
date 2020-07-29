@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 1vw;
+            height: 1vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas">
+
+</canvas>
+</body>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    addEventListener('resize', function() {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+    })
+
+    function randomNumber(min, max) {
+        return Math.ceil(Math.random() * (max - min) + min)
+    }
+
+    function randomColor() {
+        let r = randomNumber(0, 255);
+        let g = randomNumber(0, 255);
+        let b = randomNumber(0, 255);
+        return `rgb(${r},${g},${b})`
+    }
+
+    class Ball {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.dx = randomNumber(-5, 5);
+            this.dy = randomNumber(-25, -5)
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false)
+            ctx.fill();
+            ctx.closePath()
+        }
+
+        fly() {
+
+            if (this.x <= this.radius || this.x > canvas.width - this.radius) {
+                this.dx = -this.dx
+            }
+            if (this.y + this.radius < 0) {
+                this.y = canvas.height;
+            }
+            this.x = this.x + this.dx
+            this.y = this.y + this.dy
+        }
+    }
+
+    let balls = []
+    addEventListener('click', function(event) {
+        let ballradius = randomNumber(10, 50)
+        let ballx = randomNumber(0, canvas.width)
+        let bally = canvas.height - ballradius
+        let ball = new Ball(ballx, bally, ballradius, randomColor())
+        balls.push(ball)
+    })
+
+    function animate() {
+        requestAnimationFrame(animate)
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        for (let i = 0; i < balls.length; i++) {
+            balls[i].draw();
+            balls[i].fly();
+        }
+    }
+    animate()
+</script>
+
+</html>
