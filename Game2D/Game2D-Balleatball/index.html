@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="start">
+        <div>
+            <div id="layout"><button id="btn_start">Play Game</button></div>
+            <div id="layout">
+                <div class="labelName"><label for="inputName">Creat Your Name</label></div>
+                <input id="inputName" type="text">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="play"><canvas id="canvas"></canvas></div>
+    <div id="end">
+        <button id="btn_exit">Home</button>
+        <button id="btn_try_again">Try Again</button>
+    </div>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+        canvas.style.backgroundImage = "url(https://previews.123rf.com/images/alexmstudio/alexmstudio1508/alexmstudio150800012/43889983-cartoon-game-background.jpg)"
+        addEventListener("resize", function() {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+        })
+
+        let start = document.getElementById('start');
+        let play = document.getElementById('play');
+        let end = document.getElementById('end')
+
+        let inputName = document.getElementById('inputName')
+
+        let btn_start = document.getElementById('btn_start')
+        let btn_exit = document.getElementById('btn_exit')
+        let btn_try_again = document.getElementById('btn_try_again')
+
+        btn_start.addEventListener('click', function() {
+            name = inputName.value
+            console.log(name)
+            if (name == '') {
+                alert('Vui lòng nhập tên để bắt đầu game')
+                return;
+            } else {
+                start.style.display = 'none';
+                play.style.display = 'flex';
+            }
+        })
+
+        btn_exit.addEventListener('click', function() {
+            window.location.reload()
+
+        })
+
+        btn_try_again.addEventListener('click', function() {
+            end.style.display = 'none';
+            play.style.display = 'block';
+            resetGame();
+        })
+
+
+
+        class Ball {
+            constructor(x, y, radius, color) {
+                this.x = x
+                this.y = y
+                this.radius = radius
+                this.dx = 0
+                this.dy = 0
+                this.color = color
+                this.score = 0
+                this.time = 30
+            }
+            draw() {
+                ctx.beginPath()
+                ctx.beginPath()
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+                ctx.fillStyle = this.color
+                ctx.fill()
+                ctx.closePath()
+            }
+
+
+            drawBoss() {
+                    ctx.beginPath()
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+                    ctx.fillStyle = this.color
+                    ctx.shadowColor = "white"
+                    ctx.shadowBlur = 5
+                    ctx.fill()
+                    ctx.closePath()
+
+                    ctx.beginPath()
+                    ctx.font = "25px Roboto"
+                    ctx.fillStyle = "#fff"
+                    ctx.textAlign = 'center'
+                    ctx.fillText(name, this.x, this.y + 10)
+                    ctx.closePath()
+                } //hàm vẽ hình tròn lớn
+
+
+            move() {
+
+                if ((this.x > canvas.width - this.radius - 1) || (this.x + this.dx <= this.radius)) {
+                    this.dx = -this.dx
+                }
+                if ((this.y > canvas.height - this.radius - 1) || (this.y + this.dy <= this.radius)) {
+                    this.dy = -this.dy
+                }
+                this.x = this.x + this.dx
+                this.y = this.y + this.dy
+            }
+
+
+
+            drawScore() {
+                    ctx.beginPath()
+                    ctx.fillStyle = '#ffb8b8'
+                    ctx.font = "100px Roboto"
+                    ctx.fillText(this.score, 100, canvas.height - 50)
+                    ctx.closePath()
+                } // in điểm ra màn hình
+
+            drawTime() {
+                ctx.beginPath()
+                ctx.fillStyle = '#fff'
+                ctx.font = "50px Roboto"
+                ctx.fillText(this.time, canvas.width - 50, 75)
+                ctx.closePath()
+            }
+
+
+            touch(object) {
+                let c1c2 = Math.sqrt((this.x - object.x) * (this.x - object.x) + (this.y - object.y) * (this.y - object.y))
+                if (c1c2 < this.radius + object.radius) {
+                    this.x = -50
+                    this.y = -50
+                    object.score += 1;
+                    if (object.score == 60) {
+                        play.style.display = "none";
+                        end.style.display = "flex"
+                    }
+                    if (object.score == 10) {
+                        object.radius = 33;
+                    }
+                    if (object.score == 20) {
+                        object.radius = 37;
+                    }
+                    if (object.score == 30) {
+                        object.radius = 41;
+                    }
+                    if (object.score == 40) {
+                        object.radius = 45;
+                    }
+                    if (object.score == 50) {
+                        object.radius = 48;
+                    }
+
+                    new Audio('http://dight310.byu.edu/media/audio/FreeLoops.com/5/5/Mouse%20Click%20Fast.wav-23232-Free-Loops.com.mp3').play();
+                }
+
+            }
+        }
+
+        function randomNumber(min, max) {
+            return Math.ceil(Math.random() * (max - min) + min)
+        }
+
+        let arrayPoint = []
+        for (let i = 0; i < 60; i++) {
+            let randomX = randomNumber(80, canvas.width - 10)
+            let randomY = randomNumber(80, canvas.height - 10)
+            arrayPoint.push(new Ball(randomX, randomY, 7, '#fff200'))
+        }
+        let isPlaying = false;
+        var ballBoss = new Ball(30, 30, 30, "#ff3838")
+        ballBoss.drawBoss()
+        ballBoss.drawScore()
+        ballBoss.drawTime()
+
+        function countDownTime() {
+            isPlaying = true;
+
+            let interval = setInterval(function() {
+                if (ballBoss.time > 0) {
+                    ballBoss.time -= 1;
+                } else {
+                    end.style.display = 'flex';
+                    play.style.display = 'none';
+                }
+            }, 1000);
+            if (ballBoss.time == 0) {
+                clearInterval(interval)
+            }
+        }
+
+        addEventListener('keydown', function(event) {
+
+            if (event.keyCode == 37) {
+                if (!isPlaying) {
+                    countDownTime()
+                }
+                ballBoss.dx = -5
+                ballBoss.dy = 0
+
+            }
+            if (event.keyCode == 39) {
+                if (!isPlaying) {
+                    countDownTime()
+                }
+                ballBoss.dx = 5
+                ballBoss.dy = 0
+            }
+            if (event.keyCode == 38) {
+                if (!isPlaying) {
+                    countDownTime()
+                }
+                ballBoss.dx = 0
+                ballBoss.dy = -5
+            }
+            if (event.keyCode == 40) {
+                if (!isPlaying) {
+                    countDownTime()
+                }
+                ballBoss.dx = 0
+                ballBoss.dy = 5
+            }
+            if (event.keyCode == 32) {
+                ballBoss.dx = 0
+                ballBoss.dy = 0
+            }
+        })
+
+        function resetGame() {
+            ballBoss.x = 40;
+            ballBoss.y = 40;
+            ballBoss.radius = 40;
+            ballBoss.dx = 0;
+            ballBoss.dy = 0;
+            ballBoss.score = 0;
+            ballBoss.time = 30
+            isPlaying = false;
+            arrayPoint = []
+            for (let i = 0; i < 60; i++) {
+                let randomX = randomNumber(80, canvas.width - 10)
+                let randomY = randomNumber(80, canvas.height - 10)
+                arrayPoint.push(new Ball(randomX, randomY, 7, '#eb4d4b'))
+            }
+        }
+
+
+        function animate() {
+            requestAnimationFrame(animate)
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            for (let i = 0; i < arrayPoint.length; i++) {
+                arrayPoint[i].draw()
+                arrayPoint[i].touch(ballBoss)
+            }
+            ballBoss.drawBoss()
+            ballBoss.drawScore()
+            ballBoss.move()
+            ballBoss.drawTime()
+
+        }
+        animate()
+    </script>
+</body>
+
+</html>
