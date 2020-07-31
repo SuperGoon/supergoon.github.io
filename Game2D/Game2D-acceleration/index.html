@@ -80,7 +80,7 @@
     addEventListener('keydown', function(event) { //bấm phím làm tăng gia tốc dx cho bóng
         if (event.keyCode == 39) {
             console.log('Left was pressed');
-            ball.dx += 10;
+            ball.dx = 10;
             ball.frictionForce = 0.99
         } else if (event.keyCode == 37) {
             console.log('Left was pressed');

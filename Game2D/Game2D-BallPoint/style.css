@@ -1,0 +1,95 @@
+html,
+body {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+#start,
+#play,
+#end {
+    width: 100vw;
+    height: 100vh;
+}
+
+#start {
+    display: flex;
+    background: url(https://static.vecteezy.com/system/resources/previews/000/208/954/original/vector-abstract-landscape-illustration.jpg);
+    background-size: cover;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+#layout {
+    display: block;
+    justify-content: center;
+}
+
+.labelName {
+    margin-top: 36px;
+    color: #33c6ce;
+}
+
+#inputName {
+    outline: none;
+    width: 150px;
+    height: 20px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 5px;
+}
+
+#play {
+    display: none;
+}
+
+#end {
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/007/920/741/large/mikhail-emelianov-bg-slav-color-2-3.jpg?1509369224);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#btn_start,
+#btn_exit,
+#btn_try_again {
+    border: 0px;
+    border-radius: 20px;
+    background-color: #4834d4;
+    color: #c7ecee;
+    font-weight: 700;
+    font-size: 20px;
+    width: 155px;
+    height: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 0px 5px 2px rgb(197, 197, 197);
+    cursor: pointer;
+    outline: none;
+    transition: all ease-in-out 1s;
+}
+
+#btn_exit {
+    margin-right: 50px;
+}
+
+#btn_try_again {
+    margin-left: 50px;
+}
+
+#btn_start:hover {
+    background-color: #3f45ec;
+    color: #ff7979;
+    transform: scale(1.1)
+}
+
+#btn_exit:hover {
+    background-color: #3f45ec;
+    color: #ff7979;
+}
+
+#btn_try_again:hover {
+    background-color: #3f45ec;
+    color: #ff7979;
+}
