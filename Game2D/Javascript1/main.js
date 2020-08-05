@@ -52,6 +52,17 @@ function upperCaseFirstWord(stringThreeBonus) {
 let a = 'aDSAGd sfagaSDf saSDFSF sdfsDFSFA ầDF'
 console.log(upperCaseFirstWord(a))
 
+//Cách 2: 
+function run(str) {
+    let arr = str.split(" ")
+    let check = arr.map(function(a) {
+        return a.charAt(0).toUpperCase() + a.substring(1).toLowerCase()
+    })
+    return check.join(" ");
+}
+
+console.log(run('chÀo MừnG đẾn với techMaster'))
+
 //Bài 4+5: Cho 1 chuỗi, viết Fn sao chép chuỗi lên 10 lần 
 function repeatString(stringFour) {
     let arr = stringFour.split(","); //Biến 1 chuỗi thành 1 mảng
