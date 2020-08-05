@@ -201,12 +201,7 @@ console.log(sum)
 //Bài 5:
 
 function parameter(array) {
-    let arr = []
-    array.map(function(a, b) {
-        arr.push(a % 2)
-            //console.log(arr)
-    })
-    return arr;
+    return array.map(a => a % 2)
 }
 let arr5 = [4, 5, 2, 6, 2, 325, 5345]
 console.log(parameter(arr5))
