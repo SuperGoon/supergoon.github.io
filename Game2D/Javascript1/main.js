@@ -31,7 +31,7 @@ console.log(stringInString('acb df', 'ac'))
 
 //Bài 2: Fn rút ngắn chuỗi:
 function shortenString(stringThree) {
-    var newString = stringThree.slice(0, 8);
+    let newString = stringThree.slice(0, 8);
     return `${newString}...`;
 }
 
@@ -39,28 +39,28 @@ function shortenString(stringThree) {
 //Bải 3: Fn chỉ viết hoa chữ cái đầu tiên các từ trong chuỗi
 
 function upperCaseFirstWord(stringThreeBonus) {
-    var array = stringThreeBonus.split(" ")
-    var arrayBonus = []
+    let array = stringThreeBonus.split(" ")
+    let arrayBonus = []
     for (let i = 0; i < array.length; i++) {
-        var arr = array[i].toLowerCase();
+        let arr = array[i].toLowerCase();
         arr = arr.charAt(0).toUpperCase() + arr.substring(1);
         arrayBonus.push(arr)
     }
     return arrayBonus.join(" ")
 }
 
-var a = 'aDSAGd sfagaSDf saSDFSF sdfsDFSFA ầDF'
+let a = 'aDSAGd sfagaSDf saSDFSF sdfsDFSFA ầDF'
 console.log(upperCaseFirstWord(a))
 
 //Bài 4+5: Cho 1 chuỗi, viết Fn sao chép chuỗi lên 10 lần 
 function repeatString(stringFour) {
-    var arr = stringFour.split(","); //Biến 1 chuỗi thành 1 mảng
-    var newArr = []; //Tạo mảng mới
+    let arr = stringFour.split(","); //Biến 1 chuỗi thành 1 mảng
+    let newArr = []; //Tạo mảng mới
     for (let i = 0; i < 10; i++) {
         newArr.push(arr); //Push bằng vòng lặp
     }
 
-    var newRepeatString = newArr.join("-") //Chuyển mảng về chuỗi cùng dấu gạch -
+    let newRepeatString = newArr.join("-") //Chuyển mảng về chuỗi cùng dấu gạch -
     console.log(arr)
     console.log(newArr)
     console.log(newRepeatString);
@@ -71,7 +71,7 @@ console.log(repeatString(stringFour))
 
 //Cách 2: 
 function repeatString1(stringFour1) {
-    var newStringFour1 = stringFour1;
+    let newStringFour1 = stringFour1;
     for (let i = 0; i < 9; i++) {
         newStringFour1 += `-${stringFour1}`;
     }
@@ -80,8 +80,8 @@ function repeatString1(stringFour1) {
 
 //Bài 6: Sao chép chuỗi lên n lần
 function repeatStringN(stringFourN, n) {
-    var arr = stringFourN.split(","); //Biến 1 chuỗi thành 1 mảng
-    var newArr = []; //Tạo mảng mới
+    let arr = stringFourN.split(","); //Biến 1 chuỗi thành 1 mảng
+    let newArr = []; //Tạo mảng mới
     for (let i = 0; i < n; i++) {
         newArr.push(arr) //Push bằng vòng lặp
     }
@@ -89,7 +89,7 @@ function repeatStringN(stringFourN, n) {
 }
 //Cách 2: 
 function repeatStringN2(stringFourN2, n) {
-    var newstringFourN2 = stringFourN2;
+    let newstringFourN2 = stringFourN2;
     for (let i = 0; i < n; i++) {
         newstringFourN2 += `-${stringFourN2}`
     }
@@ -99,7 +99,7 @@ function repeatStringN2(stringFourN2, n) {
 //Bài 7: Viết hàm đảo ngược chuỗi
 
 function reverseString(stringFive) {
-    var newReverseString = "";
+    let newReverseString = "";
     for (i = stringFive.length - 1; i >= 0; --i) {
         newReverseString += stringFive[i];
     }
@@ -109,13 +109,13 @@ function reverseString(stringFive) {
 //Bài 8: Kiểm tra chuỗi đối xứng:
 
 function testString(stringSix) {
-    var arrTest = stringSix.split(" "); //chuyển về mảng, bỏ space
+    let arrTest = stringSix.split(" "); //chuyển về mảng, bỏ space
 
-    var newString = arrTest.join(""); //chuyển lại về chuỗi sau khi bỏ space
+    let newString = arrTest.join(""); //chuyển lại về chuỗi sau khi bỏ space
 
-    var newString1 = newString.toLowerCase(); //chuỗi ban đầu chuyển về viết thường và k còn space
+    let newString1 = newString.toLowerCase(); //chuỗi ban đầu chuyển về viết thường và k còn space
 
-    var newStringTest = ""; //tạo chuỗi đảo ngược của chuỗi sau khi bỏ space và viết thường
+    let newStringTest = ""; //tạo chuỗi đảo ngược của chuỗi sau khi bỏ space và viết thường
 
     for (i = newString1.length - 1; i >= 0; --i) {
         newStringTest += newString1[i]
@@ -133,7 +133,7 @@ function testString(stringSix) {
 //Bài tập về Array:
 
 //Bài 1: Viết hàm tìm số nhỏ nhất trong mảng:
-var arr2 = [23, 145, , 234, 234, 234, 234, 12, 11]
+let arr2 = [23, 145, , 234, 234, 234, 234, 12, 11]
 
 function minNumber(array) {
     return array.sort((a, b) => a - b)[0]
@@ -155,8 +155,8 @@ console.log(maxSecondNumber(arr2))
 
 //Bài 3: 
 function name(array) {
-    var arr = array.sort()
-    var arr1 = []
+    let arr = array.sort()
+    let arr1 = []
     for (let i = arr.length - 1; i >= 0; i--) {
         arr1.push(arr[i])
     }
@@ -167,17 +167,17 @@ console.log(name(arr3))
 
 //Bài 4: Tính tổng các số chia hết cho 5 từ 0-100:
 
-var arr = []
+let arr = []
 for (i = 0; i <= 100; i++) {
     if (i % 5 == 0) {
         arr.push(i)
     }
 }
-var arr4 = arr.reduce((a, b) => a + b)
+let arr4 = arr.reduce((a, b) => a + b)
 console.log(arr);
 console.log(arr4)
     //Cách 2:
-var sum = 0;
+let sum = 0;
 for (i = 0; i <= 100; i++) {
     if (i % 5 == 0) {
         sum += i
@@ -188,21 +188,21 @@ console.log(sum)
 //Bài 5:
 
 function parameter(array) {
-    var arr = []
+    let arr = []
     array.map(function(a, b) {
         arr.push(a % 2)
             //console.log(arr)
     })
     return arr;
 }
-var arr5 = [4, 5, 2, 6, 2, 325, 5345]
+let arr5 = [4, 5, 2, 6, 2, 325, 5345]
 console.log(parameter(arr5))
 
 //Bài 6: 
 
 function filterArray(array) {
-    var arr7 = array.sort((a, b) => b.length - a.length)
-    var arr8 = []
+    let arr7 = array.sort((a, b) => b.length - a.length)
+    let arr8 = []
     arr7.filter(function(a, b) {
         if (a.length == arr7[0].length) {
             arr8.push(a)
@@ -211,5 +211,5 @@ function filterArray(array) {
     return arr8
 }
 
-var arr6 = ['ageg', 'saaaaaa', 'fdaaaaa', 'saaafaf', 'faaaasd', 'ffsa']
+let arr6 = ['ageg', 'saaaaaa', 'fdaaaaa', 'saaafaf', 'faaaasd', 'ffsa']
 console.log(filterArray(arr6))
