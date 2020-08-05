@@ -154,7 +154,7 @@ console.log(minNumber(arr2))
 
 //Bài 2: Tìm số lớn thứ 2 trong mảng
 function maxSecondNumber(array) {
-    arr = array.sort((a, b) => b - a)
+    let arr = array.sort((a, b) => b - a)
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] - arr[i - 1] < 0) {
             return arr[i]
