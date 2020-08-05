@@ -210,12 +210,9 @@ console.log(parameter(arr5))
 
 function filterArray(array) {
     let arr7 = array.sort((a, b) => b.length - a.length)
-    let arr8 = []
-    arr7.filter(function(a) {
-        if (a.length == arr7[0].length) {
-            arr8.push(a)
-        }
-    })
+
+    let arr8 = arr7.filter(a => a.length == arr7[0].length)
+
     return arr8
 }
 
