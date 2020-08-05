@@ -150,7 +150,9 @@ function minNumber(array) {
     return array.sort((a, b) => a - b)[0]
 }
 console.log(minNumber(arr2))
-    //Bài 2: Tìm số lớn thứ 2 trong mảng
+
+
+//Bài 2: Tìm số lớn thứ 2 trong mảng
 function maxSecondNumber(array) {
     arr = array.sort((a, b) => b - a)
     for (let i = 1; i < arr.length; i++) {
@@ -166,8 +168,8 @@ console.log(maxSecondNumber(arr2))
 
 //Bài 3: 
 function name(array) {
-    let arr = array.sort()
-    let arr1 = []
+    let arr = array.sort();
+    let arr1 = [];
     for (let i = arr.length - 1; i >= 0; i--) {
         arr1.push(arr[i])
     }
@@ -214,7 +216,7 @@ console.log(parameter(arr5))
 function filterArray(array) {
     let arr7 = array.sort((a, b) => b.length - a.length)
     let arr8 = []
-    arr7.filter(function(a, b) {
+    arr7.filter(function(a) {
         if (a.length == arr7[0].length) {
             arr8.push(a)
         }
