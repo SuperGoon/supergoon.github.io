@@ -160,7 +160,7 @@ function maxSecondNumber(array) {
             return arr[i]
         }
     }
-    return;
+    return false;
 
 }
 
