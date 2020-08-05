@@ -8,7 +8,7 @@ function checkString(stringOne, stringTwo) {
     }
     return result;
 }
-
+//Cách 2: kiểm tra luôn xem đầu vào có phải là 1 string hay không
 function stringInString(haystack, needle) {
     var check = haystack.indexOf(needle);
     if (check >= 0) {
@@ -21,7 +21,13 @@ function stringInString(haystack, needle) {
     }
     return result;
 }
-console.log(stringInString('acb df'), ('ac'))
+
+//Cách 3:
+function checkStringExist(string1, string2) {
+    return string1.includes(string2);
+}
+
+console.log(stringInString('acb df', 'ac'))
 
 //Bài 2: Fn rút ngắn chuỗi:
 function shortenString(stringThree) {
@@ -136,7 +142,7 @@ console.log(minNumber(arr2))
     //Bài 2: Tìm số lớn thứ 2 trong mảng
 function maxSecondNumber(array) {
     arr = array.sort((a, b) => b - a)
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         if (arr[i] - arr[i - 1] < 0) {
             return arr[i]
         }
@@ -170,7 +176,14 @@ for (i = 0; i <= 100; i++) {
 var arr4 = arr.reduce((a, b) => a + b)
 console.log(arr);
 console.log(arr4)
-
+    //Cách 2:
+var sum = 0;
+for (i = 0; i <= 100; i++) {
+    if (i % 5 == 0) {
+        sum += i
+    }
+}
+console.log(sum)
 
 //Bài 5:
 
