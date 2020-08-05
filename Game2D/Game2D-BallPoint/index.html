@@ -144,7 +144,7 @@
 
 
             touch(object) {
-                let c1c2 = Math.sqrt((this.x - object.x) * (this.x - object.x) + (this.y - object.y) * (this.y - object.y))
+                let c1c2 = Math.sqrt((this.x - object.x) ** 2 + (this.y - object.y) ** 2)
                 if (c1c2 < this.radius + object.radius) {
                     this.x = -50
                     this.y = -50
@@ -257,7 +257,7 @@
             for (let i = 0; i < 60; i++) {
                 let randomX = randomNumber(80, canvas.width - 10)
                 let randomY = randomNumber(80, canvas.height - 10)
-                arrayPoint.push(new Ball(randomX, randomY, 7, '#eb4d4b'))
+                arrayPoint.push(new Ball(randomX, randomY, 7, '#fff200'))
             }
         }
 
