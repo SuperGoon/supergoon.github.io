@@ -155,7 +155,7 @@ let listUser = [{
 ]
 
 function chooseUser(arrList) {
-    return arrList.filter((element) => element.age >= 25 && element.isStatus == true)
+    return arrList.filter((element) => element.age > 25 && element.isStatus == true)
 }
 
 function listAge(arrList) {
