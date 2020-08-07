@@ -58,7 +58,7 @@ function checkPrimeNumber2(n) {
     } else {
         for (let i = 3; i < Math.sqrt(n); i += 2) {
             if (n % i == 0) {
-                check = false;
+                result = false;
                 break;
             }
         }
@@ -164,3 +164,5 @@ function listAge(arrList) {
 
 console.log(chooseUser(listUser))
 console.log(listAge(listUser))
+
+console.log(Array.from(user))
