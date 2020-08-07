@@ -72,9 +72,7 @@ function repeatString(stringFour) {
     }
 
     let newRepeatString = newArr.join("-") //Chuyển mảng về chuỗi cùng dấu gạch -
-    console.log(arr)
-    console.log(newArr)
-    console.log(newRepeatString);
+
     return newArr.join(" "); //Chuyển mảng về chuỗi
 }
 stringFour = 'A'
