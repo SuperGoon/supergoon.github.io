@@ -10,7 +10,7 @@ console.log(calculateVolume(6))
 //Bài 2: Tính tổng các số nguyên nằm giữa 2 số:
 
 function calculateTotal(a, b) {
-    if (Number.isInteger(a, b) == true) {
+    if (Number.isInteger(a, b)) {
         let min = a
         let max = b
         let sum = 0;
@@ -50,7 +50,7 @@ function checkPrimeNumber(n) {
 //Rút gọn
 function checkPrimeNumber2(n) {
     let result = true;
-    if (Number.isInteger(n) == false || n < 2 || n % 2 == 0) {
+    if (!Number.isInteger(n) || n < 2 || n % 2 == 0) {
         result = false;
     }
     if (n == 2) {
@@ -67,7 +67,7 @@ function checkPrimeNumber2(n) {
 }
 
 console.log(checkPrimeNumber(11))
-console.log(checkPrimeNumber2(8))
+console.log(checkPrimeNumber2(8.1))
 
 //Bài 4: Tính tổng các số nguyên tố nhỏ hơn hoăc bằng tham số truyền vào
 function totalPrimeNumber(x) {

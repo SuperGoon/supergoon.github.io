@@ -63,6 +63,7 @@
     }
     
     .inputText {
+        outline: none;
         border-color: #1d2a5b;
         width: 142px;
         -webkit-appearance: none;

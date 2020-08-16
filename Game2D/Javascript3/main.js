@@ -38,22 +38,21 @@ console.log(tuoi(listUser))
 // bài 3:
 function ziczac(m, n) {
     let arr = []
-    let arr2 = []
+    let arrZiczac = []
 
     for (let i = 1; i <= m * n; ++i) {
         arr.push(i)
     }
     for (let i = 0; i < arr.length; i += n) {
-        let littleArr = arr.slice(i, i + n)
-        arr2.push(littleArr)
+        arrZiczac.push(arr.slice(i, i + n))
     }
-    for (let i = 0; i < arr2.length; ++i) {
+    for (let i = 0; i < arrZiczac.length; ++i) {
         if (i % 2 !== 0) {
-            arr2[i].reverse()
+            arrZiczac[i].reverse()
         }
     }
 
-    return arr2
+    return arrZiczac
 }
 
 console.log(ziczac(5, 3))

@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+body {
+    background-image: url(./img/Milky_Way_Galaxy_in_St...Filled_Night_Sky.jpg);
+    color: white;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.navbar {
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 80px;
+    width: 1024px;
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    justify-items: center;
+}
+
+.navbar-1 {
+    max-width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    justify-items: center;
+}
+
+.navbar-2 {
+    max-width: 80%;
+    height: auto;
+}
+
+.navbar-2>ul {
+    display: flex;
+    justify-content: right;
+    justify-items: center;
+    flex-direction: column;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-2>li {
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    letter-spacing: 2px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    transition: border-color .2s linear;
+    font-size: .875rem;
+    margin: 0 50px;
+}
