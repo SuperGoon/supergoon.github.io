@@ -1038,6 +1038,8 @@
 .home-product-item:hover {
     transform: translateY(-1px);
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--primary-color);
+    z-index: 1;
 }
 
 .home-product-item__img {
@@ -1208,6 +1210,27 @@ i.home-product-item__heart-fill {
 
 .home-product__pagination {
     margin: 48px 0 32px 0;
+}
+
+.home-product-item__text {
+    position: absolute;
+    width: calc(100% + 2px);
+    line-height: 3.3rem;
+    height: 3.3rem;
+    font-size: 1.4rem;
+    display: none;
+    top: calc(100%);
+    left: -1px;
+    text-align: center;
+    color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.home-product-item:hover .home-product-item__text {
+    display: block;
 }
 
 
