@@ -1082,7 +1082,7 @@
 .home-product-item__price-current {
     font-size: 1.6rem;
     color: var(--primary-color);
-    margin-left: 10px;
+    margin-left: 2px;
 }
 
 .home-product-item__action {
