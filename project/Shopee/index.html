@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee-clone</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets_css/css/reset.css">
     <link rel="stylesheet" href="./assets_css/css/base.css">
     <link rel="stylesheet" href="./assets_css/css/main.css">
+    <link rel="stylesheet" href="./assets_css/css/grid.css">
+    <link rel="stylesheet" href="./assets_css/css/responsive.css">
     <link rel="stylesheet" href="./assets_css/font/fontawesome-free-5.13.1-web/css/all.min.css">
     <link rel="shortcut icon" href="./assets_css/img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- Block__Element--Modifier quy tắc đặt tên class-->
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng
@@ -153,8 +156,11 @@
 
                 <!-- header-with-search -->
                 <div class="header-with-search">
+                    <label class="header__mobile-search" for="mobile-search-checkbox">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
                     <!-- logo -->
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                                 <g fill-rule="evenodd">
@@ -166,6 +172,7 @@
                         </a>
                     </div>
 
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
                     <!-- search -->
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -288,6 +295,20 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active \">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
         <!-- <div class="grid grid__content">
             <div class="content">
@@ -313,7 +334,7 @@
             </div>
         </div> -->
         <div class="app_container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -344,7 +365,7 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -839,7 +860,7 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -951,7 +972,7 @@
 
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">Copyright © 2019 Bản quyền thuộc về supergoon23102019</p>
                 </div>
             </div>
