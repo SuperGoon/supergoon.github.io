@@ -1,3 +1,7 @@
+.app {
+    overflow: hidden;
+}
+
 .header {
     height: var(--header-height);
     background-image: linear-gradient(0, var(--primary-color), rgb(245, 63, 45));
@@ -485,6 +489,7 @@
 
 .header__mobile-search {
     padding: 0 12px;
+    display: none;
 }
 
 .header__mobile-search-icon {
@@ -531,6 +536,7 @@
     display: inline-block;
     padding: 0 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-icon {
@@ -937,11 +943,11 @@
 
 /* App container */
 
-.app_container {
+.app__container {
     background-color: #F5F5F5;
 }
 
-.app_content {
+.app__content {
     padding-top: 36px;
 }
 
@@ -1006,6 +1012,64 @@
 
 .category-item__link:hover {
     color: var(--primary-color);
+}
+
+
+/* mobile - category */
+
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    max-width: 100%;
+    overflow-x: auto;
+    align-items: center;
+}
+
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.mobile-category__item:nth-of-type(3n + 1) .mobile-category__link {
+    background-color: #87AFD8;
+}
+
+.mobile-category__item:nth-of-type(3n + 2) .mobile-category__link {
+    background-color: #76C9BD;
+}
+
+.mobile-category__item:nth-of-type(3n + 3) .mobile-category__link {
+    background-color: #88CF81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: var(--line-height);
+    height: calc(var(--line-height)*2);
+    overflow: hidden;
+    text-align: center;
+    width: 110px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    border-radius: 4px;
+    font-weight: 300;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0 6px;
 }
 
 
@@ -1276,6 +1340,7 @@ i.home-product-item__heart-fill {
 
 .home-product__pagination {
     margin: 48px 0 32px 0;
+    padding-left: 0;
 }
 
 .home-product-item__text {
