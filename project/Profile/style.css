@@ -29,15 +29,31 @@ body {
     height: 17rem;
     background: var(--white-color);
     border-radius: 20px;
-    box-shadow: 0 10px 10px #163f78;
-    transition: transform linear 0.3s;
-    will-change: transform;
+    /* box-shadow: 0 10px 10px #163f78; */
+    /* transition: transform linear 0.3s;
+    will-change: transform; */
+    animation: test 2s infinite;
 }
 
-.profile:hover {
+@keyframes test {
+    0% {
+        top: 48%;
+        box-shadow: 0 0px 10px #163f78;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 48%;
+        box-shadow: 0 5px 10px #163f78;
+    }
+}
+
+
+/* .profile:hover {
     transform: translate(-50%, -48%);
     box-shadow: 0 7px 7px #163f78;
-}
+} */
 
 .round {
     position: absolute;
