@@ -10,178 +10,176 @@
 
 <body>
     <div class="container">
-        <div class="mb-4">
-            <h1 class="h1 text-center mb-4 mt-4">Bài tập Javascript</h1>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 1, 2, 3, 7: </span>
+        <div>
+            <div class="mb-4">
+                <h1 class="h1 text-center mb-4 mt-4">Bài tập Javascript</h1>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 1, 2, 3, 7: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input1">
                 </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input1">
-            </div>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Input test sử dụng cho bài 1: </span>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Input test sử dụng cho bài 1: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input2">
                 </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input2">
-            </div>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 4, 5, 6: </span>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 4, 5, 6: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input3">
                 </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input3">
-            </div>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Input number sử dụng cho bài 6: </span>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Input number sử dụng cho bài 6: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Xin mời nhập số" id="input-number">
                 </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập số" id="input-number">
-            </div>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 8: </span>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 8: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input4">
                 </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input4">
-            </div>
-            <p class="noti text-danger"></p>
-            <p class="noti-number-error text-danger"></p>
-            <button type="submit" class="btn btn-primary" id="btn-1">Xác nhận</button>
-            <button type="button" class="btn btn-primary" onclick="reload()">
+                <p class="noti text-danger"></p>
+                <p class="noti-number-error text-danger"></p>
+                <button type="submit" class="btn btn-primary" id="btn-1">Xác nhận</button>
+                <button type="button" class="btn btn-primary" onclick="reload()">
                 <a href="./index.html" class="text-white text-decoration-none">Tải lại</a>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <div>
-            <p>Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false - Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            <div>
+                <p>Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false - Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Ví dụ: shortenString('Xin chào các bạn') => Kết quả trả về là 'Xin chào...'</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên. Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => Kết quả trả về là 'Chào Mừng Đến Với Techmaster'</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a') => Kết quả trả về là 'a-a-a-a-a-a-a-a-a-a'</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 7. Viết hàm đảo ngược chuỗi. Viết dunction với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc false. Ví dụ ''Race car'' trả về true, ''hello
+                    world'' trả về false.</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
             </div>
         </div>
 
+
         <div>
-            <p>Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Ví dụ: shortenString('Xin chào các bạn') => Kết quả trả về là 'Xin chào...'</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            <div class="mb-4">
+                <h1 class="h1 text-center mb-4 mt-4">Bài tập về Array</h1>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Xin mời nhập mảng số (sử dụng cho bài 1, 2, 5) :</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Lưu ý: Các phần tử của mảng các nhau bởi dấu phẩy!! Ví dụ: 1, 2, 3, 4..." id="input-array-numbers">
+                </div>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Xin mời nhập mảng tên học viên (sử dụng cho bài 3) :</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Lưu ý: Các phần tử của mảng các nhau bởi dấu phẩy!! Ví dụ: Hoa, Hồng, Cẩm..." id="input-array-name">
+                </div>
+                <div class="input-group flex-nowrap mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Xin mời nhập mảng các chuỗi (sử dụng cho bài 6) :</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Lưu ý: Các phần tử của mảng các nhau bởi dấu phẩy!! Ví dụ: 1, 2, 3, 4..." id="input-array-string">
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn-2">Xác nhận</button>
+                <button type="button" class="btn btn-primary" onclick="reload()">
+                    <a href="./index.html" class="text-white text-decoration-none">Tải lại</a>
+                </button>
+            </div>
+            <div>
+                <p>Bài 1. Viết hàm tìm ra số nhỏ nhất trong mảng các số. Ví dụ: minNumbers([2, 1, 3]) => Kết quả trả về là 1</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 2. Viết hàm tìm ra số lớn thứ nhì trong mảng các số. Ví dụ: max2Numbers([2, 1, 3, 4]) => Kết quả trả về là 3</p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 3. Viết hàm truyền vào 1 mảng tên học viên, sắp xếp lại mảng này theo chiều ngược của bảng chữ cái. Ví dụ: sortStudents(['Nam', 'Hoa', 'Tuấn']) => Kết quả trả về là ['Tuấn', 'Nam', 'Hoa'] </p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 4. Tính tổng các số chia hết cho 5 từ 0 -> 100 </p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 5. Viết hàm cho phép truyền vào 1 mảng các số, kết quả trả về là 1 mảng mới với các số là số dư tương ứng khi chia mảng cũ cho 2 </p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
+            </div>
+
+            <div>
+                <p>Bài 6. Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với tham số [''aba'', ''aa'', ''ad'', ''c'', ''vcd''] thì kết quả trả về [''aba'', ''vcd'']. </p>
+                <div class="card-body border-bottom">
+                    <p class="text-primary">Kết quả : <span class="result"></span> </p>
+                </div>
             </div>
         </div>
-
-        <div>
-            <p>Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên. Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => Kết quả trả về là 'Chào Mừng Đến Với Techmaster'</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-        <div>
-            <p>Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-        <div>
-            <p>Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a') => Kết quả trả về là 'a-a-a-a-a-a-a-a-a-a'</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-        <div>
-            <p>Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-        <div>
-            <p>Bài 7. Viết hàm đảo ngược chuỗi. Viết dunction với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-        <div>
-            <p>Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc false. Ví dụ ''Race car'' trả về true, ''hello world''
-                trả về false.</p>
-            <div class="card-body border-bottom">
-                <p class="text-primary">Kết quả :<span class="result"></span> </p>
-            </div>
-        </div>
-
-
-        <!-- <h1 class="h1">Bài tập về Array</h1>
-        <div>
-            <p>Bài 1. Viết hàm tìm ra số nhỏ nhất trong mảng các số. Ví dụ:
-                minNumbers([2, 1, 3]) => Kết quả trả về là 1</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div>
-            <p>Bài 2. Viết hàm tìm ra số lớn thứ nhì trong mảng các số. Ví dụ:
-                max2Numbers([2, 1, 3, 4]) => Kết quả trả về là 3</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div>
-            <p>Bài </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div>
-            <p>Bài </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div>
-            <p>Bài </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div> -->
-
-        <script src="main.js"></script>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
