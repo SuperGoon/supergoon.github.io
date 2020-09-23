@@ -14,18 +14,37 @@
             <h1 class="h1 text-center mb-4 mt-4">Bài tập Javascript</h1>
             <div class="input-group flex-nowrap mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Mời nhập chuỗi cần kiểm tra: </span>
+                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 1, 2, 3, 7: </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input1">
             </div>
             <div class="input-group flex-nowrap mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Mời nhập chuỗi cần kiểm tra: </span>
+                    <span class="input-group-text" id="addon-wrapping">Input test sử dụng cho bài 1: </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input2">
             </div>
+            <div class="input-group flex-nowrap mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 4, 5, 6: </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input3">
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Input number sử dụng cho bài 6: </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Xin mời nhập số" id="input-number">
+            </div>
+            <div class="input-group flex-nowrap mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Input sử dụng cho bài 8: </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input4">
+            </div>
             <p class="noti text-danger"></p>
-            <button type="submit" class="btn btn-primary" onclick="getData()">Xác nhận</button>
+            <p class="noti-number-error text-danger"></p>
+            <button type="submit" class="btn btn-primary" id="btn-1">Xác nhận</button>
             <button type="button" class="btn btn-primary" onclick="reload()">
                 <a href="./index.html" class="text-white text-decoration-none">Tải lại</a>
             </button>
@@ -33,136 +52,59 @@
 
         <div>
             <p>Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false - Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="checkStringExist(string1, string2)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Ví dụ: shortenString('Xin chào các bạn') => Kết quả trả về là 'Xin chào...'</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="shortenString(string1)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên. Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => Kết quả trả về là 'Chào Mừng Đến Với Techmaster'</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="upperCaseFirstWord(arrStr)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <div class class="mb-4">
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Mời nhập chuỗi cần nhân bản: </span>
-                </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input3">
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
             </div>
-            <div class="input-group flex-nowrap mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-wrapping">Mời nhập số lần nhân bản: </span>
-                </div>
-                <input type="text" class="form-control" placeholder="Xin mời nhập chuỗi" id="input4">
-            </div>
-            <p class="noti-number-error text-danger"></p>
-            <p class="noti-number-success text-success"></p>
-            <button type="submit" class="btn btn-primary" onclick="getNumber()">Xác nhận</button>
-            <button type="button" class="btn btn-primary" onclick="reload()">
-                <a href="./index.html" class="text-white text-decoration-none">Tải lại</a>
-            </button>
         </div>
 
         <div>
             <p>Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="repeatStringTask4(string3)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a') => Kết quả trả về là 'a-a-a-a-a-a-a-a-a-a'</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="repeatStringTask5(string3)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang. Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="repeatStringTask6(string3, number)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 7. Viết hàm đảo ngược chuỗi. Viết dunction với đầu vào là 1 chuỗi string. Trả về chuỗi đảo ngược của chuỗi đó Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="reverseString(string3)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
         <div>
             <p>Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc false. Ví dụ ''Race car'' trả về true, ''hello world''
                 trả về false.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class=" border-top-0" scope="col"> <button type="button" class="btn btn-primary" onclick="testString(string3)">Kết quả :</button></th>
-                        <th class="border-top-0 text-right" scope="col">
-                            <p class="result"></p>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card-body border-bottom">
+                <p class="text-primary">Kết quả :<span class="result"></span> </p>
+            </div>
         </div>
 
 
