@@ -7,22 +7,24 @@ let number = null;
 
 const btn1 = $('#btn-1')
 
-btn1.on('click', getData)
-btn1.on('click', checkStringExist)
-btn1.on('click', shortenString)
-btn1.on('click', upperCaseFirstWord)
-btn1.on('click', repeatStringTask4)
-btn1.on('click', repeatStringTask5)
-btn1.on('click', repeatStringTask6)
-btn1.on('click', reverseString)
-btn1.on('click', testString)
+btn1.on('click', () => {
+    getData();
+    checkStringExist();
+    shortenString();
+    upperCaseFirstWord();
+    repeatStringTask4();
+    repeatStringTask5();
+    repeatStringTask6();
+    reverseString();
+    testString();
+})
 
-btn1.on('click', consoleLog)
+// btn1.on('click', consoleLog)
 
-function consoleLog() {
-    console.log(string1.split(", "))
-    console.log(string1)
-}
+// function consoleLog() {
+//     console.log(string1.split(", "))
+//     console.log(string1)
+// }
 
 function getData() {
     string1 = $('#input1').val();
@@ -101,14 +103,17 @@ let array1, array2, array3;
 
 const btn2 = $('#btn-2')
 
-btn2.on('click', getDataArray)
-btn2.on('click', minNumber)
-btn2.on('click', maxSecondNumber)
-btn2.on('click', sortName)
-btn2.on('click', sum)
-btn2.on('click', parameter)
-btn2.on('click', filterArray)
-    // $('#btn-2').click(() => maxSecondNumber())
+btn2.on('click', () => {
+    getDataArray();
+    minNumber();
+    maxSecondNumber();
+    sortName();
+    sum();
+    parameter();
+    filterArray();
+})
+
+// $('#btn-2').click(() => maxSecondNumber())
 
 
 function getDataArray() {
