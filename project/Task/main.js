@@ -25,16 +25,16 @@ function consoleLog() {
 }
 
 function getData() {
-    string1 = document.getElementById('input1').value;
-    string2 = document.getElementById('input2').value;
-    string3 = document.getElementById('input3').value;
-    string4 = document.getElementById('input4').value;
-    number = document.getElementById('input-number').value;
+    string1 = $('#input1').val();
+    string2 = $('#input2').val();
+    string3 = $('#input3').val();
+    string4 = $('#input4').val();
+    number = $('#input-number').val();
     if (string1.length < 8) {
-        document.getElementsByClassName('noti')[0].innerHTML = "Nhập ít nhất 8 ký tự. Vui lòng tải lại để tiếp tục"
+        $($('.noti')[0]).html("Nhập ít nhất 8 ký tự. Vui lòng tải lại để tiếp tục")
     }
     if (number < 1 || isNaN(number) === true) {
-        document.getElementsByClassName('noti-number-error')[0].innerHTML = "Vui lòng nhập số nguyên dương"
+        $($('.noti-number-error')[0]).html("Vui lòng nhập số nguyên dương")
     }
 }
 
