@@ -1,0 +1,125 @@
+.top-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background: $whiteColor;
+    align-items: center;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__logo-search {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    &__logo {
+        color: $blueColor;
+        font-size: $height;
+    }
+    &__search {
+        margin-left: 10px;
+        width: 240px;
+        height: $height;
+        display: flex;
+        background-color: $primaryColor;
+        border-radius: 20px;
+        color: $textColor;
+        font-size: 1.6rem;
+        &>label {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            padding: 7px 16px;
+            height: auto;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            &>i {
+                color: #8f8f8f;
+                font-weight: 300;
+            }
+        }
+        & input {
+            outline: none;
+            overflow: hidden;
+            padding-left: 5px;
+            color: $textColor;
+            border: none;
+            background-color: $primaryColor;
+        }
+    }
+    &__list-logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: $textColor;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+    &__item-logo {
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        color: $textColor;
+        line-height: 60px;
+        &:first-child {
+            border-bottom: 2px solid $blueColor;
+        }
+    }
+    &__noti {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        &-item {
+            width: $height;
+            height: $height;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            position: relative;
+            &>i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover {
+                background: $buttonColor;
+            }
+        }
+        &-item-avatar {
+            width: 100%;
+            height: 36px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            &>img {
+                margin-left: 4px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            &:hover {
+                background-color: $primaryColor;
+            }
+        }
+        &-item-nickname {
+            margin-right: 4px;
+        }
+    }
+    &>.col-2 {
+        background: $primaryColor;
+    }
+    & .col-4 {
+        padding: 0 8px;
+    }
+}

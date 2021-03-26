@@ -1,0 +1,137 @@
+:root {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #f0f2f5;
+  color: #050505;
+}
+
+.top-bar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.top-bar__logo-search {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.top-bar__logo {
+  color: #166ada;
+  font-size: 4.2rem;
+}
+.top-bar__search {
+  margin-left: 10px;
+  width: 240px;
+  height: 4.2rem;
+  display: flex;
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  color: #050505;
+  font-size: 1.6rem;
+}
+.top-bar__search > label {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding: 7px 16px;
+  height: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.top-bar__search > label > i {
+  color: #8f8f8f;
+  font-weight: 300;
+}
+.top-bar__search input {
+  outline: none;
+  overflow: hidden;
+  padding-left: 5px;
+  color: #050505;
+  border: none;
+  background-color: #f0f2f5;
+}
+.top-bar__list-logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #050505;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+}
+.top-bar__item-logo {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  color: #050505;
+  line-height: 60px;
+}
+.top-bar__item-logo:first-child {
+  border-bottom: 2px solid #166ada;
+}
+.top-bar__noti {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar__noti-item {
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #f0f2f5;
+  border-radius: 50%;
+  position: relative;
+}
+.top-bar__noti-item > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top-bar__noti-item:hover {
+  background: #d8dadf;
+}
+.top-bar__noti-item-avatar {
+  width: 100%;
+  height: 36px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.top-bar__noti-item-avatar > img {
+  margin-left: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.top-bar__noti-item-avatar:hover {
+  background-color: #f0f2f5;
+}
+.top-bar__noti-item-nickname {
+  margin-right: 4px;
+}
+.top-bar > .col-2 {
+  background: #f0f2f5;
+}
+.top-bar .col-4 {
+  padding: 0 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -10,10 +10,7 @@ function changColor() {
     for (let i = 0; i < 6; i++) {
         let random = Math.floor(Math.random() * hexItem.length)
         hexColor += hexItem[random]
-        console.log(hexColor)
     }
     bodyBgc.style.backgroundColor = hexColor
     hex.innerHTML = hexColor
 }
-
-changColor()

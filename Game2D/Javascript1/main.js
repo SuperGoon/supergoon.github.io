@@ -42,9 +42,7 @@ function upperCaseFirstWord(stringThreeBonus) {
     let array = stringThreeBonus.split(" ")
     let arrayBonus = []
     for (let i = 0; i < array.length; i++) {
-        let arr = array[i].toLowerCase();
-        arr = arr.charAt(0).toUpperCase() + arr.substring(1);
-        arrayBonus.push(arr)
+        arrayBonus.push(array[i].charAt(0).toUpperCase() + array[i].substring(1).toLowerCase())
     }
     return arrayBonus.join(" ")
 }
@@ -115,16 +113,13 @@ function reverseString(stringFive) {
     return newReverseString;
 }
 
+console.log(reverseString('string abc'))
+
 //Bài 8: Kiểm tra chuỗi đối xứng:
 
 function testString(stringSix) {
-    let arrTest = stringSix.split(" "); //chuyển về mảng, bỏ space
-
-    let newString = arrTest.join(""); //chuyển lại về chuỗi sau khi bỏ space
-
-    let newString1 = newString.toLowerCase(); //chuỗi ban đầu chuyển về viết thường và k còn space
-
     let newStringTest = ""; //tạo chuỗi đảo ngược của chuỗi sau khi bỏ space và viết thường
+    let newString1 = stringSix.split(' ').join('').toLowerCase()
 
     for (i = newString1.length - 1; i >= 0; --i) {
         newStringTest += newString1[i]
@@ -137,6 +132,8 @@ function testString(stringSix) {
     }
     return result;
 }
+
+console.log(testString('oclco1'))
 
 
 //Bài tập về Array:

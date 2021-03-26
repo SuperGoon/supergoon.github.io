@@ -41,6 +41,16 @@ header {
     height: calc(100vh - 240px);
     min-height: 530px;
     max-height: 640px;
+    position: relative;
+}
+
+.header__opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0.9;
 }
 
 .header-1 {

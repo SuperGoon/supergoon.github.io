@@ -64,11 +64,11 @@
 
 .header__navbar-user-menu::before {
     position: absolute;
-    border-width: 20px 24px;
+    border-width: 16px 20px;
     content: "";
     border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
-    right: 4px;
+    right: 6px;
     top: -30px;
 }
 
@@ -687,7 +687,7 @@
 }
 
 .header__cart-list--no-cart .header__cart-no-cart-img,
-.header__cart-list--no-cart .header__cart-list-no-cart-msg {
+.header__cart-list-no-cart-msg {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -927,9 +927,9 @@
     position: absolute;
     top: 50%;
     left: 0;
+    transform: translateY(-50%);
     height: 60%;
     border-left: 1px solid #e5e5e5;
-    transform: translateY(-50%);
 }
 
 .header__sort-item--active {
