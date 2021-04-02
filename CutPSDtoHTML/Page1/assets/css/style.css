@@ -127,16 +127,19 @@ body {
 }
 .banner-heading {
   margin: 15px 0;
-  font-size: 50px;
-  line-height: 1;
+  font-size: 55px;
+  line-height: 1.5;
   font-weight: 500;
+}
+.banner-heading span {
+  display: inline-block;
 }
 .banner-text {
   margin: 50px 0;
   font-weight: 300;
   font-size: 20px;
-  line-height: 1;
-  opacity: 0.8;
+  line-height: 1.5;
+  opacity: 0.9;
 }
 .banner-image {
   position: absolute;
