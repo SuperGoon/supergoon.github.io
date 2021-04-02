@@ -1,0 +1,80 @@
+#project {
+    margin: 150px auto;
+    width: 100%;
+    height: 728px;
+}
+
+.project {
+    &-heading {
+        text-align: center;
+        color: $text-color;
+        &>h1 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+        &>p {
+            width: 50%;
+            margin: 50px auto 100px;
+            line-height: 1.5;
+        }
+    }
+    &-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        &-image {
+            width: 33.333333%;
+            height: 330px;
+            margin: 0 8px;
+            position: relative;
+            border-radius: 10px;
+        }
+        &-image>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            z-index: 100;
+            transition: all 0.5s ease-out;
+            opacity: 0;
+        }
+        &-image:hover .image-background {
+            opacity: 0.5;
+        }
+        &-image:hover>h1 {
+            opacity: 0.8;
+        }
+    }
+}
+
+.image {
+    &-left {
+        background: url("../images/portafolio1.png") no-repeat;
+        // background-size: 100% 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    &-center {
+        background: url("../images/portafolio2.png") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-right {
+        background: url("../images/portafolio3.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    &-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: $primary-color;
+        border-radius: 10px;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        display: grid;
+        place-items: center;
+    }
+}

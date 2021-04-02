@@ -19,11 +19,35 @@ body {
   border-radius: 10px;
   outline: none;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 .btn-primary {
   width: 245px;
   background: #2d63d1;
   text-decoration: none;
+}
+.btn-primary:hover {
+  background: #4071d3;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-title {
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: #393e46;
+  line-height: 1;
+}
+.card-text {
+  margin: 30px 0;
+  opacity: 0.8;
+  line-height: 2;
+  text-align: justify;
 }
 
 .header {
@@ -121,7 +145,7 @@ body {
   z-index: 1;
 }
 
-.content {
+.main-content {
   width: 100%;
   height: auto;
 }
@@ -133,31 +157,15 @@ body {
   display: flex;
 }
 
-.about-content,
+.about-card,
 .about-images {
   margin: 0;
   height: 100%;
   width: 50%;
 }
 
-.about-content {
+.about-card {
   padding-right: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.about-content--title {
-  margin: 10px 0;
-  font-size: 30px;
-  font-weight: 900;
-  color: #393e46;
-  line-height: 1;
-}
-.about-content--text {
-  margin: 30px 0;
-  opacity: 0.8;
-  line-height: 1.5;
-  text-align: justify;
 }
 
 .about-images {
@@ -169,7 +177,7 @@ body {
   bottom: 0;
   z-index: 9;
   border-radius: 15px;
-  box-shadow: 0 0 15px 3px #686868;
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.6);
 }
 .about-images-second {
   height: 440px;
@@ -177,6 +185,151 @@ body {
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+#brand {
+  margin: 150px auto;
+  width: 1170px;
+  height: 650px;
+  display: flex;
+}
+
+.brand-left {
+  width: 25%;
+  height: 100%;
+  margin: 0 16px;
+  display: grid;
+  place-items: center;
+}
+.brand-left-icon {
+  width: 100%;
+  height: 50%;
+  margin-left: -16px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(17, 11, 11, 0.08);
+  display: grid;
+  place-items: center;
+}
+.brand-center {
+  width: 40%;
+  height: 100%;
+}
+.brand-center-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.brand-right {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center-icon-top {
+  width: 370px;
+  height: 370px;
+  padding: 50px;
+  background: #2d63d1;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.center-icon-top > p {
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+.center-icon-bottom {
+  width: 50%;
+  height: 40%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+#project {
+  margin: 150px auto;
+  width: 100%;
+  height: 728px;
+}
+
+.project-heading {
+  text-align: center;
+  color: #393e46;
+}
+.project-heading > h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.project-heading > p {
+  width: 50%;
+  margin: 50px auto 100px;
+  line-height: 1.5;
+}
+.project-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.project-content-image {
+  width: 33.333333%;
+  height: 330px;
+  margin: 0 8px;
+  position: relative;
+  border-radius: 10px;
+}
+.project-content-image > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 100;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+.project-content-image:hover .image-background {
+  opacity: 0.5;
+}
+.project-content-image:hover > h1 {
+  opacity: 0.8;
+}
+
+.image-left {
+  background: url("../images/portafolio1.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.image-center {
+  background: url("../images/portafolio2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.image-right {
+  background: url("../images/portafolio3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.image-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #2d63d1;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+.main-content {
+    width: 100%;
+    height: auto;
+}
+
+#about {
+    margin: 150px auto;
+    width: $width-primary;
+    height: 540px;
+    display: flex;
+}
+
+.about-card,
+.about-images {
+    margin: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.about-card {
+    padding-right: 100px;
+}
+
+.about-images {
+    position: relative;
+    &-first {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 9;
+        border-radius: 15px;
+        box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.6);
+    }
+    &-second {
+        height: 440px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

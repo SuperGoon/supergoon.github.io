@@ -1,0 +1,101 @@
+.header {
+    background: linear-gradient( to bottom right, $gradient-color-start, $gradient-color-end);
+    height: 1080px;
+    width: 100%;
+    &-navbar {
+        margin: 0 auto;
+        max-width: $width-primary;
+        height: 120px;
+        display: flex;
+        align-items: center;
+    }
+    &-line {
+        height: 2px;
+        width: 100%;
+        background: #fec080;
+    }
+    &-banner {
+        margin: 0 auto;
+        max-width: $width-primary;
+        position: relative;
+    }
+}
+
+// navbar
+.navbar {
+    &-logo {
+        margin-right: 100px;
+    }
+    &-menu {}
+    &-list {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+    &-item {
+        list-style-type: none;
+        margin-left: 60px;
+        & a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: $white-color;
+            transition: all 0.3s ease-out;
+        }
+        & a:hover {
+            color: #00ff5e;
+        }
+    }
+    &-search {
+        margin-left: auto;
+        color: $white-color;
+        &-input {
+            height: 22px;
+            width: 180px;
+            padding: 5px 10px;
+            line-height: 16px;
+            outline: none;
+            overflow: hidden;
+            border: none;
+            border-radius: 5px;
+        }
+        &>i {
+            cursor: pointer;
+        }
+    }
+}
+
+// banner
+.banner {
+    &-content {
+        height: 960px;
+        color: $white-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-heading {
+        margin: 15px 0;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 500;
+    }
+    &-text {
+        margin: 50px 0;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1;
+        opacity: 0.8;
+    }
+    &-image {
+        position: absolute;
+        top: 0;
+        right: -60px;
+        z-index: 1;
+    }
+}
