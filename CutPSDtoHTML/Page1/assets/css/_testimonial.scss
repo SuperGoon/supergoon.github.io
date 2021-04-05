@@ -1,0 +1,39 @@
+#testimonial {
+    margin: auto;
+    width: $width-primary;
+    height: 680px;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial {
+    &-image {
+        width: 33.333333%;
+        height: 100%;
+    }
+    &-description {
+        padding: 70px;
+        width: 66.666666%;
+        height: 60%;
+        background-color: $white-color;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        &>img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &>p {
+            font-size: 32px;
+            line-height: 1.5;
+            color: $text-color;
+        }
+        &>i {
+            display: block;
+            margin: 60px 0;
+        }
+    }
+}

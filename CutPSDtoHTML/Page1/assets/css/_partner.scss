@@ -1,0 +1,42 @@
+#partner {
+    width: 95%;
+    height: 640px;
+    margin: auto;
+    margin-bottom: 150px;
+    background-color: $primary-color;
+    border-radius: 30px;
+}
+
+.partner {
+    &-content {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        max-width: $width-primary;
+        display: flex;
+    }
+    &-card {
+        height: 100%;
+        width: 50%;
+        color: $white-color;
+        padding-right: 16.66667%;
+        & .card-title {
+            color: $white-color;
+        }
+    }
+    &-logos {
+        height: 100%;
+        width: 50%;
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logos-image {
+    text-align: center;
+    &>img {
+        margin-bottom: 100px;
+    }
+}
