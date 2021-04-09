@@ -26,22 +26,28 @@ body {
     cursor: pointer;
     display: grid;
     place-items: center;
+    width: 245px;
+    text-decoration: none;
     &-primary {
-        width: 245px;
         background: $primary-color;
-        text-decoration: none;
         &:hover {
             background: $primary-color-hover;
         }
     }
     &-green {
-        width: 245px;
         background: $green-color;
         color: $primary-color;
         font-weight: 700;
-        text-decoration: none;
         &:hover {
             background: $green-color-hover;
+        }
+    }
+    &-gradient {
+        width: 270px;
+        font-weight: 700;
+        background: linear-gradient( to bottom right, $gradient-color-end, $gradient-color-start);
+        &:hover {
+            background: linear-gradient( to bottom right, $gradient-color-start, $gradient-color-end);
         }
     }
 }

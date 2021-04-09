@@ -1,15 +1,25 @@
-.header {
+#header {
     background: linear-gradient( to bottom right, $gradient-color-start, $gradient-color-end);
     height: 1080px;
     width: 100%;
+}
+
+.header {
     &-navbar {
-        margin: 0 auto;
-        max-width: $width-primary;
-        height: 120px;
+        padding: 0 20px;
+        max-width: 100%;
+        height: $height-menu;
+        background: linear-gradient( to bottom right, $gradient-color-start, $gradient-color-end);
         display: flex;
         align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
     }
     &-line {
+        margin-top: $height-menu;
         height: 2px;
         width: 100%;
         background: #fec080;

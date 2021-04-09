@@ -14,7 +14,7 @@
 
 <body>
     <div class="wrapper">
-        <section class="header">
+        <section id="header">
             <!-- Navbar -->
             <div class="header-navbar">
                 <div class="navbar-logo">
@@ -23,7 +23,7 @@
                 <div class="navbar-menu">
                     <ul class="navbar-list">
                         <li class="navbar-item">
-                            <a href="">Home</a>
+                            <a href="#header">Home</a>
                         </li>
                         <li class="navbar-item">
                             <a href="#about">About Us</a>
@@ -32,10 +32,10 @@
                             <a href="#project">Services</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="">Blog</a>
+                            <a href="#blog">Blog</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
                 </div>
             </section>
             <section class="main-content">
-                <div id="about">
+                <section id="about">
                     <div class="card about-card">
                         <h2 class="card-title">Multiple options to make <span>Your idea come true</span></h2>
                         <p class="card-text">
@@ -82,94 +82,162 @@
                     <img src="./assets/images/shutterstock1.png" class="about-images-first" alt="shutterstock1" />
                     <img src="./assets/images/shutterstock2.png" class="about-images-second" alt="shutterstock2" />
                 </div>
+        </section>
+        <section id="brand">
+            <div class="brand-left">
+                <div class="brand-left-icon">
+                    <img src="./assets/images/icon1.png" alt="left icon" />
+                </div>
             </div>
-            <div id="brand">
-                <div class="brand-left">
-                    <div class="brand-left-icon">
-                        <img src="./assets/images/icon1.png" alt="left icon" />
+            <div class="brand-center">
+                <div class="brand-center-icon">
+                    <div class="center-icon-top">
+                        <img src="./assets/images/icon2.png" alt="right icon" />
+                        <p>Reponsive Ready</p>
                     </div>
-                </div>
-                <div class="brand-center">
-                    <div class="brand-center-icon">
-                        <div class="center-icon-top">
-                            <img src="./assets/images/icon2.png" alt="right icon" />
-                            <p>Reponsive Ready</p>
-                        </div>
-                        <div class="center-icon-bottom">
-                            <img src="./assets/images/icon3.png" alt="right icon" />
-                        </div>
-                    </div>
-                </div>
-                <div class="brand-right">
-                    <div class="card">
-                        <h2 class="card-title">That your brand to <span>The next level</span></h2>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis iure alias exercitationem, repudiandae, mollitia minima facilis tenetur corporis pariatur debitis corrupti?
-                        </p>
-                        <a href="" class="btn btn-primary">Get Started</a>
+                    <div class="center-icon-bottom">
+                        <img src="./assets/images/icon3.png" alt="right icon" />
                     </div>
                 </div>
             </div>
-            <div id="project">
-                <div class="project-heading">
-                    <h1>See your marketing projects</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo, excepturi et ea iusto saepe laborum, modi, veritatis ullam
+            <div class="brand-right">
+                <div class="card">
+                    <h2 class="card-title">That your brand to <span>The next level</span></h2>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis iure alias exercitationem, repudiandae, mollitia minima facilis tenetur corporis pariatur debitis corrupti?
                     </p>
-                </div>
-                <div class="project-content">
-                    <div class="project-content-image image-left">
-                        <div class="image-background"></div>
-                        <h1>Exploy</h1>
-                    </div>
-                    <div class="project-content-image image-center">
-                        <div class="image-background"></div>
-                        <h1>Exploy</h1>
-                    </div>
-                    <div class="project-content-image image-right">
-                        <div class="image-background"></div>
-                        <h1>Exploy</h1>
-                    </div>
+                    <a href="" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
-            <div id="testimonial">
-                <img src="./assets/images/portafolio4.png" class="testimonial-image"></img>
-                <div class="testimonial-description">
-                    <img src="./assets/images/testimonial.png" alt="">
-                    <p>
-                        Rump spare ribs tail <b>pastrami ham hock turducken</b> fatback salami. Ham hock pork belly, corned swine salami.
+        </section>
+        <section id="project">
+            <div class="project-heading">
+                <h1>See your marketing projects</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo, excepturi et ea iusto saepe laborum, modi, veritatis ullam
+                </p>
+            </div>
+            <div class="project-content">
+                <div class="project-content-image image-left">
+                    <div class="image-background"></div>
+                    <h1>Exploy</h1>
+                </div>
+                <div class="project-content-image image-center">
+                    <div class="image-background"></div>
+                    <h1>Exploy</h1>
+                </div>
+                <div class="project-content-image image-right">
+                    <div class="image-background"></div>
+                    <h1>Exploy</h1>
+                </div>
+            </div>
+        </section>
+        <section id="testimonial">
+            <img src="./assets/images/portafolio4.png" class="testimonial-image"></img>
+            <div class="testimonial-description">
+                <img src="./assets/images/testimonial.png" alt="">
+                <p>
+                    Rump spare ribs tail <b>pastrami ham hock turducken</b> fatback salami. Ham hock pork belly, corned swine salami.
+                </p>
+                <i>Avy Deluxer</i>
+            </div>
+        </section>
+        <section id="partner">
+            <div class="partner-content">
+                <div class="card partner-card">
+                    <h2 class="card-title">Like them, for your Company too</h2>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis iure alias exercitationem, repudiandae, mollitia minima facilis tenetur corporis pariatur debitis corrupti?
                     </p>
-                    <i>Avy Deluxer</i>
+                    <a href="" class="btn btn-green">Get Started</a>
                 </div>
-            </div>
-            <div id="partner">
-                <div class="partner-content">
-                    <div class="card partner-card">
-                        <h2 class="card-title">Like them, for your Company too</h2>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis iure alias exercitationem, repudiandae, mollitia minima facilis tenetur corporis pariatur debitis corrupti?
-                        </p>
-                        <a href="" class="btn btn-green">Get Started</a>
+                <div class="partner-logos">
+                    <div class="logos-image">
+                        <img src="./assets/images/logo_LovelyCafé.png" alt="">
+                        <img src="./assets/images/logo_SlinCorp.png" alt="">
+
                     </div>
-                    <div class="partner-logos">
-                        <div class="logos-image">
-                            <img src="./assets/images/logo_LovelyCafé.png" alt="">
-                            <img src="./assets/images/logo_SlinCorp.png" alt="">
-
-                        </div>
-                        <div class="logos-image">
-                            <img src="./assets/images/logo_Remark.png" alt="">
-                            <img src="./assets/images/logo_Charlitton.png" alt="">
-                        </div>
-
-
-
-
+                    <div class="logos-image">
+                        <img src="./assets/images/logo_Remark.png" alt="">
+                        <img src="./assets/images/logo_Charlitton.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+        <section id="blog">
+            <div class="blog-description">
+                <div class="card blog-card">
+                    <h2 class="card-title">The latest updates to our Blog</h2>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="blog-content-right">
+                    <div class="content-right-card">
+                        <img src="./assets/images/update1.png" alt="" class="card-image">
+                        <div class="card">
+                            <h2 class="card-title">The latest updates to our Blog</h2>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-content-left">
+                    <div class="content-left-card">
+                        <img src="./assets/images/update2.png" alt="">
+                        <div class="left-card-item">
+                            <h2 class="left-card-title">The latest updates to our Blog</h2>
+                            <span class="left-card-text">2 mins ago</span>
+                        </div>
+                    </div>
+                    <div class="content-left-card">
+                        <img src="./assets/images/update3.png" alt="">
+                        <div class="left-card-item">
+                            <h2 class="left-card-title">The latest updates to our Blog</h2>
+                            <span class="left-card-text">2 mins ago</span>
+                        </div>
+                    </div>
+                    <div class="content-left-card">
+                        <img src="./assets/images/update4.png" alt="">
+                        <div class="left-card-item">
+                            <h2 class="left-card-title">The latest updates to our Blog</h2>
+                            <span class="left-card-text">2 mins ago</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="blog-btn">
+                <div class="btn btn-primary">Get Started</div>
+            </div>
+
+        </section>
+        <section id="contact">
+            <div class="contact">
+                <div class="card contact-card">
+                    <h1 class="card-title">Contact us to Grow your Business</h1>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime mollitia sed repudiandae id dicta ad! Eos quis </p>
+                </div>
+                <div class="contact-form">
+                    <div class="form-input">
+                        <input type="text" placeholder="Antho_">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="E.g supergon@gmail.com">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Your message">
+                    </div>
+                    <div class="blog-btn">
+                        <div class="btn btn-gradient">Send Message</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        </div>
 </body>
 
 </html>
